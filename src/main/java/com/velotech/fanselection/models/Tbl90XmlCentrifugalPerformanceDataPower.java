@@ -1,0 +1,175 @@
+
+package com.velotech.fanselection.models;
+// Generated Jun 25, 2019 5:39:16 PM by Hibernate Tools 4.0.0.Final
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.hibernate.annotations.Filter;
+import org.hibernate.annotations.FilterDef;
+import org.hibernate.annotations.ParamDef;
+
+/**
+ * Tbl90XmlCentrifugalPerformanceDataPower created by Vikram
+ */
+@Entity
+@Table(name = "tbl_90_xml_centrifugal_performance_data_power")
+@FilterDef(name = "company", parameters = { @ParamDef(name = "company", type = "java.lang.String") })
+@Filter(name = "company", condition = ":company= company ")
+public class Tbl90XmlCentrifugalPerformanceDataPower implements java.io.Serializable { 
+
+	private int id;
+
+	private Tbl90XmlCentrifugalFanSpeed tbl90XmlCentrifugalFanSpeed;
+
+	private Double q;
+
+	private Double p;
+
+	private String createdBy;
+
+	private Date createdDate;
+
+	private String modifiedBy;
+
+	private Date modifiedDate;
+
+	private String company;
+
+	public Tbl90XmlCentrifugalPerformanceDataPower() {
+	}
+
+	public Tbl90XmlCentrifugalPerformanceDataPower(int id, Tbl90XmlCentrifugalFanSpeed tbl90XmlCentrifugalFanSpeed, Double q) {
+		this.id = id;
+		this.tbl90XmlCentrifugalFanSpeed = tbl90XmlCentrifugalFanSpeed;
+		this.q = q;
+	}
+
+	public Tbl90XmlCentrifugalPerformanceDataPower(int id, Tbl90XmlCentrifugalFanSpeed tbl90XmlCentrifugalFanSpeed, Double q, Double p,
+			String createdBy, Date createdDate, String modifiedBy, Date modifiedDate, String company) {
+		this.id = id;
+		this.tbl90XmlCentrifugalFanSpeed = tbl90XmlCentrifugalFanSpeed;
+		this.q = q;
+		this.p = p;
+		this.createdBy = createdBy;
+		this.createdDate = createdDate;
+		this.modifiedBy = modifiedBy;
+		this.modifiedDate = modifiedDate;
+		this.company = company;
+	}
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", unique = true, nullable = false)
+	public int getId() {
+
+		return this.id;
+	}
+
+	public void setId(int id) {
+
+		this.id = id;
+	}
+
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "centrifugalFanSpeedId")
+	public Tbl90XmlCentrifugalFanSpeed getTbl90XmlCentrifugalFanSpeed() {
+		return tbl90XmlCentrifugalFanSpeed;
+	}
+
+	public void setTbl90XmlCentrifugalFanSpeed(Tbl90XmlCentrifugalFanSpeed tbl90XmlCentrifugalFanSpeed) {
+		this.tbl90XmlCentrifugalFanSpeed = tbl90XmlCentrifugalFanSpeed;
+	}
+
+	@Column(name = "q", precision = 18, scale = 5)
+	public Double getQ() {
+
+		return this.q;
+	}
+
+	public void setQ(Double q) {
+
+		this.q = q;
+	}
+
+	@Column(name = "p", precision = 18, scale = 5)
+	public Double getP() {
+
+		return this.p;
+	}
+
+	public void setP(Double p) {
+
+		this.p = p;
+	}
+
+	@Column(name = "createdBy", length = 50)
+	public String getCreatedBy() {
+
+		return this.createdBy;
+	}
+
+	public void setCreatedBy(String createdBy) {
+
+		this.createdBy = createdBy;
+	}
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "createdDate", length = 10)
+	public Date getCreatedDate() {
+
+		return this.createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+
+		this.createdDate = createdDate;
+	}
+
+	@Column(name = "modifiedBy", length = 50)
+	public String getModifiedBy() {
+
+		return this.modifiedBy;
+	}
+
+	public void setModifiedBy(String modifiedBy) {
+
+		this.modifiedBy = modifiedBy;
+	}
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "modifiedDate", length = 10)
+	public Date getModifiedDate() {
+
+		return this.modifiedDate;
+	}
+
+	public void setModifiedDate(Date modifiedDate) {
+
+		this.modifiedDate = modifiedDate;
+	}
+
+	@Column(name = "company", length = 50)
+	public String getCompany() {
+
+		return this.company;
+	}
+
+	public void setCompany(String company) {
+
+		this.company = company;
+	}
+
+}

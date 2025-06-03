@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="quatation" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryWithPageHeaderAndFooter="true" uuid="f9e5c958-9e84-49ef-9422-c0e2658aa5a6">
+	<property name="ireport.zoom" value="1.1269722013523664"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="pageFooter" class="java.lang.String"/>
+	<parameter name="companyName" class="java.lang.String"/>
+	<parameter name="address1" class="java.lang.String"/>
+	<parameter name="contact" class="java.lang.String"/>
+	<parameter name="pincode" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="website" class="java.lang.String"/>
+	<parameter name="city" class="java.lang.String"/>
+	<parameter name="state" class="java.lang.String"/>
+	<parameter name="country" class="java.lang.String"/>
+	<parameter name="user" class="java.lang.String"/>
+	<parameter name="mobileNo" class="java.lang.String"/>
+	<parameter name="offerPumpId" class="java.lang.Integer" nestedType="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_28_selected_pump_bom."description" AS tbl_28_selected_pump_bom_description,
+     tbl_28_selected_pump_bom."material_description" AS tbl_28_selected_pump_bom_material_description,
+     tbl_28_selected_pump_bom."itemNo" AS tbl_28_selected_pump_bom_itemNo,
+     tbl_28_selected_pump_bom."offerPumpId" AS tbl_28_selected_pump_bom_offerPumpId,
+     tbl_28_selected_pump_bom."costing" AS tbl_28_selected_pump_bom_costing
+FROM
+     "dbo"."tbl_28_selected_pump_bom" tbl_28_selected_pump_bom
+WHERE
+     tbl_28_selected_pump_bom."offerPumpId" =$P{offerPumpId} AND tbl_28_selected_pump_bom."costing" = 1]]>
+	</queryString>
+	<field name="tbl_28_selected_pump_bom_description" class="java.lang.String"/>
+	<field name="tbl_28_selected_pump_bom_material_description" class="java.lang.String"/>
+	<field name="tbl_28_selected_pump_bom_itemNo" class="java.lang.String"/>
+	<field name="tbl_28_selected_pump_bom_offerPumpId" class="java.lang.Integer"/>
+	<field name="tbl_28_selected_pump_bom_costing" class="java.lang.Boolean"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="92819c84-f825-42fb-b29d-633bf6dcc06d"/>
+				<textElement>
+					<font size="12"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[MOC]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band>
+			<elementGroup/>
+			<elementGroup/>
+			<elementGroup/>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="13" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="100" y="0" width="280" height="13" backcolor="#CCCCCC" uuid="d5c5b6de-0128-457d-b2e7-8c3bd8b2c616"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="380" y="0" width="175" height="13" backcolor="#CCCCCC" uuid="2e1ed51c-1041-4a96-8884-f99427d42522"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Material]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="100" height="13" backcolor="#CCCCCC" uuid="59a3e9d1-adf5-4ad0-8165-b4722de5b10e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Item No]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="280" height="13" uuid="56ca8b52-138f-4fbd-bde6-b49ed474364a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_28_selected_pump_bom_description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="175" height="13" uuid="f0298a03-c981-4a6e-b9bc-3fa4d08642b5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_28_selected_pump_bom_material_description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="13" uuid="4082d60a-d341-4335-bfee-e75deaeae326"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tbl_28_selected_pump_bom_itemNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Immediate"/>
+	</summary>
+</jasperReport>

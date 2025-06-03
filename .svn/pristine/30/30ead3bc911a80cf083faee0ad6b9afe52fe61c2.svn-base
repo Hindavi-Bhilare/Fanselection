@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="offerAddonSubReportJdbc" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ba8f89a8-7377-4b42-9558-e5b8fa3b086a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="offerRevId" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_30_offerPriceAddon."offerPriceAddonId" AS tbl_30_offerPriceAddon_offerPriceAddonId,
+     tbl_30_offerPriceAddon."offerId" AS tbl_30_offerPriceAddon_offerId,
+     tbl_30_offerPriceAddon."articleNo" AS tbl_30_offerPriceAddon_articleNo,
+     tbl_30_offerPriceAddon."description" AS tbl_30_offerPriceAddon_description,
+     tbl_30_offerPriceAddon."price" AS tbl_30_offerPriceAddon_price
+FROM
+     "dbo"."tbl_30_offerPriceAddon" tbl_30_offerPriceAddon where tbl_30_offerPriceAddon."offerId"=$P{offerRevId}]]>
+	</queryString>
+	<field name="tbl_30_offerPriceAddon_offerPriceAddonId" class="java.lang.Integer"/>
+	<field name="tbl_30_offerPriceAddon_offerId" class="java.lang.Integer"/>
+	<field name="tbl_30_offerPriceAddon_articleNo" class="java.lang.String"/>
+	<field name="tbl_30_offerPriceAddon_description" class="java.lang.String"/>
+	<field name="tbl_30_offerPriceAddon_price" class="java.math.BigDecimal"/>
+	<sortField name="tbl_30_offerPriceAddon_offerPriceAddonId"/>
+	<variable name="tbl_30_offerPriceAddon_price_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{tbl_30_offerPriceAddon_price}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="16" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="2" y="0" width="150" height="15" backcolor="#B3E1DA" uuid="e2fc9d81-4584-4c8b-af57-cb02e19c8a0e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="10" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Offer Addons:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="13" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="73" height="13" uuid="1c4a8092-6666-4912-b7d6-5d94c3525669"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Item No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="0" width="389" height="13" uuid="c408e9c6-67e4-4658-a6dd-a04237ba1e0a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="0" width="93" height="13" uuid="61c25f18-ce07-45fe-b63e-95f088d3351f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="73" height="13" uuid="b7642057-378f-4d31-98cd-d48fa069c59b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_30_offerPriceAddon_articleNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="0" width="389" height="13" uuid="6bee0b38-57ac-4bc8-9df4-79e02e908ea3"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_30_offerPriceAddon_description}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="462" y="0" width="93" height="13" uuid="9e858e22-a974-47fa-add3-673bae4ed570"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_30_offerPriceAddon_price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="13" splitType="Stretch">
+			<textField pattern="###0.00">
+				<reportElement mode="Opaque" x="462" y="0" width="93" height="13" backcolor="#CCCCCC" uuid="34648a00-6bb9-4a5b-bf87-50d3997a226d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<paragraph rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{tbl_30_offerPriceAddon_price_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="73" y="0" width="389" height="13" backcolor="#CCCCCC" uuid="11efd0e7-2d3b-4987-99c3-8d2d7a5bb42c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

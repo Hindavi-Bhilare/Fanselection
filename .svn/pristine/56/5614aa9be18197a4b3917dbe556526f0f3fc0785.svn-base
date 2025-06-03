@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="quatation" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="f9e5c958-9e84-49ef-9422-c0e2658aa5a6">
+	<property name="ireport.zoom" value="1.1269722013523664"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="pageFooter" class="java.lang.String"/>
+	<parameter name="companyName" class="java.lang.String"/>
+	<parameter name="address1" class="java.lang.String"/>
+	<parameter name="contact" class="java.lang.String"/>
+	<parameter name="pincode" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="website" class="java.lang.String"/>
+	<parameter name="city" class="java.lang.String"/>
+	<parameter name="state" class="java.lang.String"/>
+	<parameter name="country" class="java.lang.String"/>
+	<parameter name="user" class="java.lang.String"/>
+	<parameter name="mobileNo" class="java.lang.String"/>
+	<parameter name="offerId" class="java.lang.Integer"/>
+	<parameter name="printPricingDetails" class="java.lang.Boolean"/>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_26_offerPump."offerId" AS tbl_26_offerPump_offerId,
+     tbl_26_offerPump."id" AS tbl_26_offerPump_id,
+     tbl_26_offerPump."tagNo" AS tbl_26_offerPump_tagNo,
+     tbl_26_offerPump."lineTotal" AS tbl_26_offerPump_lineTotal,
+     tbl_26_offerPump."addonTotal" AS tbl_26_offerPump_addonTotal,
+     tbl_23_offerRev."id" AS tbl_23_offerRev_id,
+     tbl_23_offerMaster."offerNo" AS tbl_23_offerMaster_offerNo,
+     tbl_23_offerRev."rev" AS tbl_23_offerRev_rev,
+     tbl_23_offerMaster."id" AS tbl_23_offerMaster_id,
+     tbl_23_offerRev."showPriceBreakUp" AS tbl_23_offerRev_showPriceBreakUp,
+     tbl_23_offerRev."showPrice" AS tbl_23_offerRev_showPrice,
+     tbl_23_offerRev."showTagPrice" AS tbl_23_offerRev_showTagPrice,
+     tbl_23_offerRev."showDiscount" AS tbl_23_offerRev_showDiscount,
+     tbl_23_offerRev."showCoveringLetter" AS tbl_23_offerRev_showCoveringLetter,
+     tbl_23_offerRev."lineTotal" AS tbl_23_offerRev_lineTotal,
+     tbl_23_offerRev."addonTotal" AS tbl_23_offerRev_addonTotal,
+     tbl_23_offerRev."factorTotal" AS tbl_23_offerRev_factorTotal,
+     tbl_23_offerRev."offerTotal" AS tbl_23_offerRev_offerTotal,
+     tbl_27_requirementsDP."uomFlow" AS tbl_27_requirementsDP_uomFlow,
+     tbl_27_requirementsDP."uomHead" AS tbl_27_requirementsDP_uomHead,
+     tbl_28_selected_pump_values."dpFlow" AS tbl_28_selected_pump_values_dpFlow,
+     tbl_28_selected_pump_values."dpHead" AS tbl_28_selected_pump_values_dpHead,
+     tbl_25_customerMaster."customerName" AS tbl_25_customerMaster_customerName,
+     tbl_25_customerMaster."customerAddress1" AS tbl_25_customerMaster_customerAddress1,
+     tbl_25_customerMaster."city" AS tbl_25_customerMaster_city,
+     tbl_25_customerMaster."state" AS tbl_25_customerMaster_state,
+     tbl_25_customerMaster."Country" AS tbl_25_customerMaster_Country,
+     tbl_25_customerMaster."pincode" AS tbl_25_customerMaster_pincode,
+     tbl_23_offerRev."project" AS tbl_23_offerRev_project,
+     tbl_23_offerRev."contractor" AS tbl_23_offerRev_contractor,
+     tbl_23_offerRev."offerdate" AS tbl_23_offerRev_offerdate,
+     tbl_23_offerRev."reference" AS tbl_23_offerRev_reference,
+     tbl_23_offerRev."enquiryDetails" AS tbl_23_offerRev_enquiryDetails,
+     tbl_23_offerRev."enquiryDate" AS tbl_23_offerRev_enquiryDate,
+     tbl_23_offerRev."currency" AS tbl_23_offerRev_currency,
+     tbl_23_offerRev."endUser" AS tbl_23_offerRev_endUser
+FROM
+     "dbo"."tbl_23_offerRev" tbl_23_offerRev INNER JOIN "dbo"."tbl_26_offerPump" tbl_26_offerPump ON tbl_23_offerRev."id" = tbl_26_offerPump."offerId"
+     INNER JOIN "dbo"."tbl_23_offerMaster" tbl_23_offerMaster ON tbl_23_offerRev."offerNoId" = tbl_23_offerMaster."id"
+     INNER JOIN "dbo"."tbl_25_customerMaster" tbl_25_customerMaster ON tbl_23_offerRev."customer_id" = tbl_25_customerMaster."customerId"
+     INNER JOIN "dbo"."tbl_27_requirementsDP" tbl_27_requirementsDP ON tbl_26_offerPump."id" = tbl_27_requirementsDP."id"
+     INNER JOIN "dbo"."tbl_28_selected_pump_values" tbl_28_selected_pump_values ON tbl_26_offerPump."id" = tbl_28_selected_pump_values."id"
+WHERE
+     tbl_26_offerPump."offerId" = $P{offerId}]]>
+	</queryString>
+	<field name="tbl_26_offerPump_offerId" class="java.lang.Integer"/>
+	<field name="tbl_26_offerPump_id" class="java.lang.Integer"/>
+	<field name="tbl_26_offerPump_tagNo" class="java.lang.String"/>
+	<field name="tbl_26_offerPump_lineTotal" class="java.math.BigDecimal"/>
+	<field name="tbl_26_offerPump_addonTotal" class="java.math.BigDecimal"/>
+	<field name="tbl_23_offerRev_id" class="java.lang.Integer"/>
+	<field name="tbl_23_offerMaster_offerNo" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_rev" class="java.lang.String"/>
+	<field name="tbl_23_offerMaster_id" class="java.lang.Integer"/>
+	<field name="tbl_23_offerRev_showPriceBreakUp" class="java.lang.Boolean"/>
+	<field name="tbl_23_offerRev_showPrice" class="java.lang.Boolean"/>
+	<field name="tbl_23_offerRev_showTagPrice" class="java.lang.Boolean"/>
+	<field name="tbl_23_offerRev_showDiscount" class="java.lang.Boolean"/>
+	<field name="tbl_23_offerRev_showCoveringLetter" class="java.lang.Boolean"/>
+	<field name="tbl_23_offerRev_lineTotal" class="java.math.BigDecimal"/>
+	<field name="tbl_23_offerRev_addonTotal" class="java.math.BigDecimal"/>
+	<field name="tbl_23_offerRev_factorTotal" class="java.math.BigDecimal"/>
+	<field name="tbl_23_offerRev_offerTotal" class="java.math.BigDecimal"/>
+	<field name="tbl_27_requirementsDP_uomFlow" class="java.lang.String"/>
+	<field name="tbl_27_requirementsDP_uomHead" class="java.lang.String"/>
+	<field name="tbl_28_selected_pump_values_dpFlow" class="java.lang.String"/>
+	<field name="tbl_28_selected_pump_values_dpHead" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_customerName" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_customerAddress1" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_city" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_state" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_Country" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_pincode" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_project" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_contractor" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_offerdate" class="java.sql.Date"/>
+	<field name="tbl_23_offerRev_reference" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_enquiryDetails" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_enquiryDate" class="java.sql.Date"/>
+	<field name="tbl_23_offerRev_currency" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_endUser" class="java.lang.String"/>
+	<sortField name="tbl_26_offerPump_offerId"/>
+	<variable name="scopeOfSupply" class="java.lang.String" resetType="None" calculation="System">
+		<initialValueExpression><![CDATA[""]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="136">
+			<line>
+				<reportElement positionType="Float" x="0" y="89" width="553" height="1" uuid="4919e870-bbb8-40f2-9ca7-3b3cf52021f8"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<elementGroup>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="63" y="105" width="210" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="60c7fe72-4f4c-4b79-8492-87e45fbada04"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_25_customerMaster_customerName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="4" y="105" width="52" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="7e589c78-a5c9-4e54-b443-378d90ec545d"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Customer]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="342" y="105" width="210" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="8b355e2a-9451-4042-947e-9c0407771000"/>
+					<textElement>
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_23_offerRev_reference}+" DT-"+(new SimpleDateFormat("MM/dd/yyyy")).format($F{tbl_23_offerRev_enquiryDate})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="278" y="105" width="60" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="c42824ca-b211-4a6f-b6d8-5268d944791d"/>
+					<textElement>
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Enq. & Dt.]]></text>
+				</staticText>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="4" y="120" width="52" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="fe11a15e-ffec-42f7-89de-5fca13ce4855"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Project]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="63" y="120" width="210" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="78c84400-23dc-4f83-9a4c-252e4952c043"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_23_offerRev_project}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="343" y="120" width="210" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="ca452d84-8177-4c13-9fa7-6107e36dd1a8"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_23_offerRev_endUser}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="278" y="120" width="60" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="e15a8013-1664-4eb1-ba63-01f7c617f022"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[End User]]></text>
+				</staticText>
+			</elementGroup>
+			<elementGroup>
+				<textField isStretchWithOverflow="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="63" y="91" width="210" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="da535375-2751-4c6c-8293-2b4f1e01d2be"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_23_offerMaster_offerNo}+" ("+$F{tbl_23_offerRev_rev}+")"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="4" y="91" width="52" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="9921afb9-72da-4ba4-a697-ef7df711adc8"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Offer No.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="278" y="91" width="60" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="f951a0e5-3d5a-44cc-a3db-33ee55d0d86c"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Offer Date]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="d/M/yyyy">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="342" y="91" width="210" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="b8ecb961-2972-4a4a-a966-a35dd8615693"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_23_offerRev_offerdate}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="89" width="1" height="45" uuid="89d23007-5d0c-401a-84de-07189612a360"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="277" y="89" width="1" height="45" uuid="1c1bc7c6-f1dc-4571-a84d-6ce3a6c6ca73"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="553" y="89" width="1" height="44" uuid="9a7a268f-7f23-4fd6-a8a2-11e324409eeb"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="0" y="104" width="553" height="1" forecolor="#000000" uuid="de5dc081-47fe-48f2-bb67-0e3fa1460d29"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="0" y="118" width="553" height="1" forecolor="#000000" uuid="e5183632-c2a0-40b6-b963-fe401586a7a3"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="0" y="133" width="553" height="1" forecolor="#000000" uuid="21028b22-d55c-430b-8340-f2f6f81951c5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="451" y="1" width="102" height="80" uuid="d3f88a7f-c7e0-41d5-99ab-2358d3e3da86"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="3" y="1" width="435" height="20" uuid="a6ce6b76-d164-4fb4-b950-30112f5e9aaf"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="21" width="435" height="12" uuid="33c28530-28fc-440e-b0d1-882ea763a4d6"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{address1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="33" width="435" height="12" uuid="fb3fdfbe-f6c7-48f9-81da-154e56818ef9"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{city}+" - "+$P{pincode}+" , "+$P{state}+" , "+$P{country}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="45" width="435" height="12" uuid="172f7102-73cb-4674-b35d-c21751e1f6fa"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Phone :"+$P{contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="57" width="435" height="12" uuid="dee1148e-5a9a-4557-a5b4-2779343861e8"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="69" width="435" height="12" uuid="a35332b0-9097-4592-88b4-5286ee15cadf"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{website}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="60" y="89" width="1" height="45" uuid="c6afc1da-31d1-47f4-8029-3e75937c55a5"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="337" y="89" width="1" height="45" uuid="991290b4-7e73-4029-9f9c-937b551080e8"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#2969B0" backcolor="#2969B0" uuid="39d432d4-b946-4ef9-9f86-7ae972f9c994"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Transparent" x="68" y="0" width="275" height="18" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="a99b8407-dd8e-42c6-9b89-ca66e3f5516d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="10"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Transparent" x="490" y="0" width="65" height="18" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="a57a7908-f162-451c-b988-9ff8abc0146f">
+					<printWhenExpression><![CDATA[$F{tbl_23_offerRev_showPriceBreakUp}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Verdana" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total ("+$F{tbl_23_offerRev_currency}+")"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="344" y="0" width="25" height="18" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="5092a3f1-8cba-4697-ad96-356e73315849"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="10"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="440" y="0" width="50" height="18" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="e5ac0e92-8fba-4cc6-b5e8-d37d88aa62f5">
+					<printWhenExpression><![CDATA[$F{tbl_23_offerRev_showPriceBreakUp}&&$F{tbl_23_offerRev_showDiscount}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="10"/>
+				</textElement>
+				<text><![CDATA[Dis (%)	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="0" y="0" width="65" height="18" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="46747d1a-c7e2-45cf-aba8-3b2b3b386b8d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Article No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="370" y="0" width="70" height="18" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="9d42cb9b-03e5-4156-8fc9-689eb45b7a91">
+					<printWhenExpression><![CDATA[$F{tbl_23_offerRev_showPriceBreakUp}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="10"/>
+				</textElement>
+				<text><![CDATA[Unit Price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="66" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="29" width="555" height="16" isRemoveLineWhenBlank="true" uuid="a565345f-d16c-4e46-bbb4-a5c12e3cb0b2"/>
+				<subreportParameter name="showPriceBreakUp">
+					<subreportParameterExpression><![CDATA[$F{tbl_23_offerRev_showPriceBreakUp}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="offerPump_id">
+					<subreportParameterExpression><![CDATA[$F{tbl_26_offerPump_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="showDiscount">
+					<subreportParameterExpression><![CDATA[$F{tbl_23_offerRev_showDiscount}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<returnValue subreportVariable="scopeOfSupply" toVariable="scopeOfSupply"/>
+				<subreportExpression><![CDATA["quatation_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="46" width="555" height="16" isRemoveLineWhenBlank="true" uuid="a8d04c31-aa50-4019-bfa3-2479102e1052"/>
+				<subreportParameter name="offerPump_id">
+					<subreportParameterExpression><![CDATA[$F{tbl_26_offerPump_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="showPrice">
+					<subreportParameterExpression><![CDATA[$F{tbl_23_offerRev_showPrice}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["addonSummaryOfferPump.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement mode="Transparent" x="-1" y="1" width="45" height="16" forecolor="#000000" backcolor="#CCCCCC" uuid="b273cd37-57a3-452f-9edd-bb80aac9f7a6"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Verdana" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Tag # :]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Transparent" x="44" y="1" width="510" height="16" forecolor="#000000" backcolor="#CCCCCC" uuid="6db2f0d9-29a3-4e67-b263-544fd9b44f26"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_26_offerPump_tagNo}+" [ Pump For "+$F{tbl_28_selected_pump_values_dpFlow}+" "+$F{tbl_27_requirementsDP_uomFlow}+" @ "+$F{tbl_28_selected_pump_values_dpHead}+" "+$F{tbl_27_requirementsDP_uomHead}+"]"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="33">
+			<staticText>
+				<reportElement positionType="Float" x="0" y="0" width="83" height="11" isRemoveLineWhenBlank="true" uuid="7b530618-f312-4d80-9b5c-c6cdf280adf4"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Scope Of Supply :]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" evaluationTime="Auto">
+				<reportElement positionType="Float" x="89" y="1" width="253" height="11" isRemoveLineWhenBlank="true" uuid="511edf8e-db00-44d1-87fc-786cd1372222"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{scopeOfSupply}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="346" y="16" width="109" height="15" isRemoveLineWhenBlank="true" backcolor="#CCCCCC" uuid="75b3b8b5-933f-45e8-be0a-2bda32127c36">
+					<printWhenExpression><![CDATA[$F{tbl_23_offerRev_showTagPrice}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Tag Price :]]></text>
+			</staticText>
+			<textField pattern="###0.00">
+				<reportElement positionType="Float" mode="Opaque" x="455" y="16" width="98" height="15" isRemoveLineWhenBlank="true" backcolor="#CCCCCC" uuid="b1d1bac6-d35a-4d9d-ba03-165b04af0f04">
+					<printWhenExpression><![CDATA[$F{tbl_23_offerRev_showTagPrice}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_26_offerPump_lineTotal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="203" y="4" width="80" height="10" forecolor="#969491" uuid="6978f0e9-1fec-4af5-9faf-db8c1163d505"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Verdana" size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="283" y="4" width="40" height="10" forecolor="#969491" uuid="b05579fc-a788-44f3-8d57-0aa198d24fef"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Verdana" size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="451" y="4" width="100" height="10" forecolor="#969491" uuid="049a8a5e-d930-4085-b7d4-6f6b9946ff70"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Verdana" size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="4" width="99" height="10" forecolor="#969491" uuid="8d510cc5-dfa2-4435-bf0b-ec8a035aa3bd"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Verdana" size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Printed By "+$P{companyName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="127" splitType="Immediate">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="3fd9c711-7c7a-4950-afab-9123a8efe09b"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="345" y="27" width="110" height="18" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#2969B0" uuid="fcb7dfb0-de39-44b4-9a9e-4fcba81b0bfa">
+					<printWhenExpression><![CDATA[$F{tbl_23_offerRev_showPrice}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grand Total:]]></text>
+			</staticText>
+			<textField pattern="###0.00">
+				<reportElement positionType="Float" mode="Opaque" x="454" y="27" width="101" height="18" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#2969B0" uuid="19b5f0e2-51e9-44fd-9cad-b2622abbff56">
+					<property name="" value="${tbl23OfferRev.showPrice}"/>
+					<printWhenExpression><![CDATA[$F{tbl_23_offerRev_showPrice}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_23_offerRev_offerTotal}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" x="0" y="46" width="555" height="1" uuid="b5f57784-f157-4729-a98b-07fc77503ce3">
+					<printWhenExpression><![CDATA[$F{tbl_23_offerRev_showPrice}]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="11" width="555" height="16" isRemoveLineWhenBlank="true" uuid="6f3ed384-b023-4e0d-87ea-3ff2031eb3d9"/>
+				<subreportParameter name="showPrice">
+					<subreportParameterExpression><![CDATA[$F{tbl_23_offerRev_showPrice}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="offerId">
+					<subreportParameterExpression><![CDATA[$F{tbl_23_offerRev_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["addonSummaryOfferMaster.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport runToBottom="false">
+				<reportElement positionType="Float" x="0" y="51" width="554" height="15" isRemoveLineWhenBlank="true" uuid="920bdbdb-78ec-475a-8710-4c0e151385db"/>
+				<subreportParameter name="offerId">
+					<subreportParameterExpression><![CDATA[$F{tbl_23_offerRev_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["termConditions_subreport.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement positionType="Float" x="0" y="69" width="255" height="13" uuid="4bd7be1e-4d74-44e3-a05f-ee0f887f67fb"/>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA["For "+$P{companyName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="1" y="99" width="255" height="13" uuid="a5009d5d-4900-46b0-a8af-c297462bc675"/>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA[$P{user}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="1" y="112" width="255" height="13" uuid="dc5cf928-b01c-4494-b318-78606b4dd15e">
+					<printWhenExpression><![CDATA[!$P{mobileNo}.equals("")]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA["Mob: "+$P{mobileNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

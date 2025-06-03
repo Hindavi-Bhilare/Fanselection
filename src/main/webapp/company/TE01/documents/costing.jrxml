@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="costing" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="f9e5c958-9e84-49ef-9422-c0e2658aa5a6">
+	<property name="ireport.zoom" value="1.1269722013523664"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="pageFooter" class="java.lang.String"/>
+	<parameter name="companyName" class="java.lang.String"/>
+	<parameter name="address1" class="java.lang.String"/>
+	<parameter name="contact" class="java.lang.String"/>
+	<parameter name="pincode" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="website" class="java.lang.String"/>
+	<parameter name="city" class="java.lang.String"/>
+	<parameter name="state" class="java.lang.String"/>
+	<parameter name="country" class="java.lang.String"/>
+	<parameter name="user" class="java.lang.String"/>
+	<parameter name="mobileNo" class="java.lang.String"/>
+	<parameter name="offerPumpId" class="java.util.List">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_25_customerMaster."customerName" AS tbl_25_customerMaster_customerName,
+     tbl_23_offerRev."endUser" AS tbl_23_offerRev_endUser,
+     tbl_26_offerPump."id" AS tbl_26_offerPump_id,
+     tbl_28_selected_pump."pumpModel" AS tbl_28_selected_pump_pumpModel,
+     tbl_28_selected_pump."series" AS tbl_28_selected_pump_series,
+     tbl_28_selected_pump."suction" AS tbl_28_selected_pump_suction,
+     tbl_28_selected_pump."discharge" AS tbl_28_selected_pump_discharge,
+     tbl_28_selected_pump."stage" AS tbl_28_selected_pump_stage,
+     tbl_28_selected_pump."flangeSpecification" AS tbl_28_selected_pump_flangeSpecification,
+     tbl_23_offerMaster."offerNo" AS tbl_23_offerMaster_offerNo,
+     tbl_23_offerRev."rev" AS tbl_23_offerRev_rev,
+     tbl_23_offerRev."project" AS tbl_23_offerRev_project,
+     tbl_23_offerRev."offerdate" AS tbl_23_offerRev_offerdate,
+     tbl_23_offerRev."enquiryDate" AS tbl_23_offerRev_enquiryDate,
+     tbl_23_offerRev."reference" AS tbl_23_offerRev_reference,
+     tbl_28_selected_pricing."id" AS tbl_28_selected_pricing_id,
+     tbl_28_selected_pricing."itemName" AS tbl_28_selected_pricing_itemName,
+     tbl_28_selected_pricing."description" AS tbl_28_selected_pricing_description,
+     tbl_28_selected_pricing."qty" AS tbl_28_selected_pricing_qty,
+     tbl_26_offerPump."tagNo" AS tbl_26_offerPump_tagNo
+FROM
+     "dbo"."tbl_26_offerPump" tbl_26_offerPump INNER JOIN "dbo"."tbl_28_selected_pump" tbl_28_selected_pump ON tbl_26_offerPump."id" = tbl_28_selected_pump."id"
+     INNER JOIN "dbo"."tbl_23_offerRev" tbl_23_offerRev ON tbl_26_offerPump."offerId" = tbl_23_offerRev."id"
+     INNER JOIN "dbo"."tbl_28_selected_pricing" tbl_28_selected_pricing ON tbl_26_offerPump."id" = tbl_28_selected_pricing."offerPump_id"
+     INNER JOIN "dbo"."tbl_25_customerMaster" tbl_25_customerMaster ON tbl_23_offerRev."customer_id" = tbl_25_customerMaster."customerId"
+     INNER JOIN "dbo"."tbl_23_offerMaster" tbl_23_offerMaster ON tbl_23_offerRev."offerNoId" = tbl_23_offerMaster."id"
+WHERE
+     $X{ IN ,tbl_26_offerPump."id",offerPumpId}
+ORDER BY
+     tbl_28_selected_pricing."id" ASC]]>
+	</queryString>
+	<field name="tbl_25_customerMaster_customerName" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_endUser" class="java.lang.String"/>
+	<field name="tbl_26_offerPump_id" class="java.lang.Integer"/>
+	<field name="tbl_28_selected_pump_pumpModel" class="java.lang.String"/>
+	<field name="tbl_28_selected_pump_series" class="java.lang.String"/>
+	<field name="tbl_28_selected_pump_suction" class="java.lang.String"/>
+	<field name="tbl_28_selected_pump_discharge" class="java.lang.String"/>
+	<field name="tbl_28_selected_pump_stage" class="java.lang.String"/>
+	<field name="tbl_28_selected_pump_flangeSpecification" class="java.lang.String"/>
+	<field name="tbl_23_offerMaster_offerNo" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_rev" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_project" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_offerdate" class="java.sql.Date"/>
+	<field name="tbl_23_offerRev_enquiryDate" class="java.sql.Date"/>
+	<field name="tbl_23_offerRev_reference" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_id" class="java.lang.Integer"/>
+	<field name="tbl_28_selected_pricing_itemName" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_description" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_qty" class="java.lang.Integer"/>
+	<field name="tbl_26_offerPump_tagNo" class="java.lang.String"/>
+	<group name="offerPump" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{tbl_26_offerPump_id}]]></groupExpression>
+		<groupHeader>
+			<band height="83">
+				<staticText>
+					<reportElement mode="Opaque" x="324" y="29" width="92" height="13" backcolor="#CCCCCC" uuid="3348bb8c-928d-497b-9b72-f52286a178c2"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" markup="none"/>
+					<text><![CDATA[Stage]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="140" y="29" width="92" height="13" backcolor="#CCCCCC" uuid="b689c376-7dbb-48d9-975e-0618fa0dd9e5"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" markup="none"/>
+					<text><![CDATA[Series]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="29" width="140" height="13" backcolor="#CCCCCC" uuid="714b79ee-0d87-4cb4-a880-8427d8705b3a"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" markup="none"/>
+					<text><![CDATA[Pump Model]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="232" y="29" width="92" height="13" backcolor="#CCCCCC" uuid="85a3a4a4-3437-4d56-823a-7e06cc6fb3f6"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" markup="none"/>
+					<text><![CDATA[Size]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="416" y="29" width="136" height="13" backcolor="#CCCCCC" uuid="c2ab175b-9493-4411-bacd-678a92da3a26"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" markup="none"/>
+					<text><![CDATA[Flange Specification]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="0" y="42" width="140" height="20" uuid="2f581be7-08cd-4e93-b940-d9bf0fc51fe4"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA[$F{tbl_28_selected_pump_pumpModel}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="140" y="42" width="92" height="20" uuid="2a1fed5d-c18d-4ae0-9dbc-fa079ab9eee9"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA[$F{tbl_28_selected_pump_series}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="232" y="42" width="92" height="20" uuid="d2ad54c7-d026-4fb4-a60b-499e2f8d199b"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA[$F{tbl_28_selected_pump_suction}+" x "+$F{tbl_28_selected_pump_discharge}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="324" y="42" width="92" height="20" uuid="3f4217c3-4e8a-4d2b-b6eb-6d321aa28460"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA[$F{tbl_28_selected_pump_stage}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="416" y="42" width="136" height="20" uuid="a62539c2-7b27-4bdc-b76b-5bf67a38a26c"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA[$F{tbl_28_selected_pump_flangeSpecification}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="100" y="70" width="280" height="13" uuid="d5c5b6de-0128-457d-b2e7-8c3bd8b2c616"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[Description]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="380" y="70" width="58" height="13" uuid="2e1ed51c-1041-4a96-8884-f99427d42522"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[Qty]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="70" width="100" height="13" uuid="59a3e9d1-adf5-4ad0-8165-b4722de5b10e"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[Item Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="438" y="70" width="44" height="13" uuid="0d93c40d-8c99-44ed-ba0e-46129b9222ed"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[Price/Qty]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="482" y="70" width="72" height="13" uuid="95d0ff2e-fd88-48ea-9552-f8e979e68cc0"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[Total]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="5" y="4" width="56" height="20" uuid="a51782f8-cc24-4d56-b4b4-22abbd27b212"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Tag No :-]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="62" y="4" width="168" height="20" uuid="2e00cfd1-df58-4ab8-8f3d-293b1b0f707e"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_26_offerPump_tagNo}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="141">
+				<staticText>
+					<reportElement positionType="Float" x="1" y="27" width="255" height="13" uuid="5d6d61c7-dad1-4d1d-8fca-4362cce6170c"/>
+					<textElement markup="none"/>
+					<text><![CDATA[SSP :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="1" y="56" width="255" height="13" uuid="4edff930-dba7-48b7-94bc-aeeff99b6289"/>
+					<textElement markup="none"/>
+					<text><![CDATA[Prepared By :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="1" y="86" width="255" height="13" uuid="11a5524a-913b-4b36-b1af-9d3443d6480d"/>
+					<textElement markup="none"/>
+					<text><![CDATA[Costing Dept]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="256" y="56" width="255" height="13" uuid="f8a78dc8-f4fe-49b3-99b7-c483ef5421e1"/>
+					<textElement markup="none"/>
+					<text><![CDATA[Date :]]></text>
+				</staticText>
+				<subreport>
+					<reportElement x="1" y="0" width="555" height="17" uuid="d527df0c-e004-48b5-ada0-9f60c96e9eea"/>
+					<subreportParameter name="logo"/>
+					<subreportParameter name="pageFooter"/>
+					<subreportParameter name="website"/>
+					<subreportParameter name="state"/>
+					<subreportParameter name="address1"/>
+					<subreportParameter name="companyName"/>
+					<subreportParameter name="contact"/>
+					<subreportParameter name="city"/>
+					<subreportParameter name="country"/>
+					<subreportParameter name="SUBREPORT_DIR"/>
+					<subreportParameter name="pincode"/>
+					<subreportParameter name="email"/>
+					<subreportParameter name="offerPumpId">
+						<subreportParameterExpression><![CDATA[$F{tbl_26_offerPump_id}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="user"/>
+					<subreportParameter name="mobileNo"/>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA["costingMOCSub.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="136">
+			<line>
+				<reportElement positionType="Float" x="0" y="89" width="553" height="1" uuid="4919e870-bbb8-40f2-9ca7-3b3cf52021f8"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<elementGroup>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="63" y="105" width="210" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="60c7fe72-4f4c-4b79-8492-87e45fbada04"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_25_customerMaster_customerName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="4" y="105" width="52" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="7e589c78-a5c9-4e54-b443-378d90ec545d"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Customer]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="342" y="105" width="210" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="8b355e2a-9451-4042-947e-9c0407771000"/>
+					<textElement>
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_23_offerRev_reference}+" DT-"+(new SimpleDateFormat("MM/dd/yyyy")).format($F{tbl_23_offerRev_enquiryDate})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="278" y="105" width="60" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="c42824ca-b211-4a6f-b6d8-5268d944791d"/>
+					<textElement>
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Enq. & Dt.]]></text>
+				</staticText>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="4" y="120" width="52" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="fe11a15e-ffec-42f7-89de-5fca13ce4855"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Project]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="63" y="120" width="210" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="78c84400-23dc-4f83-9a4c-252e4952c043"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_23_offerRev_project}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="343" y="120" width="210" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="ca452d84-8177-4c13-9fa7-6107e36dd1a8"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_23_offerRev_endUser}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="278" y="120" width="60" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="e15a8013-1664-4eb1-ba63-01f7c617f022"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[End User]]></text>
+				</staticText>
+			</elementGroup>
+			<elementGroup>
+				<textField isStretchWithOverflow="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="63" y="91" width="210" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="da535375-2751-4c6c-8293-2b4f1e01d2be"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_23_offerMaster_offerNo}+" ("+$F{tbl_23_offerRev_rev}+")"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="4" y="91" width="52" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="9921afb9-72da-4ba4-a697-ef7df711adc8"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Offer No.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="278" y="91" width="60" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="f951a0e5-3d5a-44cc-a3db-33ee55d0d86c"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Offer Date]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="d/M/yyyy">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="342" y="91" width="210" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="b8ecb961-2972-4a4a-a966-a35dd8615693"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_23_offerRev_offerdate}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="89" width="1" height="45" uuid="89d23007-5d0c-401a-84de-07189612a360"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="277" y="89" width="1" height="45" uuid="1c1bc7c6-f1dc-4571-a84d-6ce3a6c6ca73"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="553" y="89" width="1" height="44" uuid="9a7a268f-7f23-4fd6-a8a2-11e324409eeb"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="0" y="104" width="553" height="1" forecolor="#000000" uuid="de5dc081-47fe-48f2-bb67-0e3fa1460d29"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="0" y="118" width="553" height="1" forecolor="#000000" uuid="e5183632-c2a0-40b6-b963-fe401586a7a3"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="0" y="133" width="553" height="1" forecolor="#000000" uuid="21028b22-d55c-430b-8340-f2f6f81951c5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="451" y="1" width="102" height="80" uuid="d3f88a7f-c7e0-41d5-99ab-2358d3e3da86"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="3" y="1" width="435" height="20" uuid="a6ce6b76-d164-4fb4-b950-30112f5e9aaf"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="21" width="435" height="12" uuid="33c28530-28fc-440e-b0d1-882ea763a4d6"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{address1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="33" width="435" height="12" uuid="fb3fdfbe-f6c7-48f9-81da-154e56818ef9"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{city}+" - "+$P{pincode}+" , "+$P{state}+" , "+$P{country}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="45" width="435" height="12" uuid="172f7102-73cb-4674-b35d-c21751e1f6fa"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Phone :"+$P{contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="57" width="435" height="12" uuid="dee1148e-5a9a-4557-a5b4-2779343861e8"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="69" width="435" height="12" uuid="a35332b0-9097-4592-88b4-5286ee15cadf"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{website}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="60" y="89" width="1" height="45" uuid="c6afc1da-31d1-47f4-8029-3e75937c55a5"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="337" y="89" width="1" height="45" uuid="991290b4-7e73-4029-9f9c-937b551080e8"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="280" height="13" uuid="56ca8b52-138f-4fbd-bde6-b49ed474364a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_28_selected_pricing_description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="58" height="13" uuid="f0298a03-c981-4a6e-b9bc-3fa4d08642b5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_28_selected_pricing_qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="13" uuid="4082d60a-d341-4335-bfee-e75deaeae326"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tbl_28_selected_pricing_itemName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="438" y="0" width="44" height="13" uuid="d86f2bf7-c33f-4809-bf54-75c98ee28de1"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="2"/>
+				</textElement>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="482" y="0" width="72" height="13" uuid="3365ef77-1a96-4caa-a1b2-2c96491f6bb9"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="2"/>
+				</textElement>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="203" y="4" width="80" height="10" forecolor="#969491" uuid="6978f0e9-1fec-4af5-9faf-db8c1163d505"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Verdana" size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="283" y="4" width="40" height="10" forecolor="#969491" uuid="b05579fc-a788-44f3-8d57-0aa198d24fef"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Verdana" size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="451" y="4" width="100" height="10" forecolor="#969491" uuid="049a8a5e-d930-4085-b7d4-6f6b9946ff70"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Verdana" size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="4" width="114" height="10" forecolor="#969491" uuid="8d510cc5-dfa2-4435-bf0b-ec8a035aa3bd"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Verdana" size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Printed By PumpManagement V4"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Immediate"/>
+	</summary>
+</jasperReport>

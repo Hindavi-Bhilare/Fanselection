@@ -1,0 +1,1145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="technical_Data_sheet" pageWidth="595" pageHeight="850" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="ba514b02-5839-415d-850c-9f718f341324">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="150"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="5883ec92-8ef3-4940-9507-69cc7bf36c08"/>
+	<parameter name="chart" class="net.sf.jasperreports.engine.JRRenderable"/>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="technicalDataSheet.customerName" class="java.lang.String"/>
+	<field name="technicalDataSheet.project" class="java.lang.String"/>
+	<field name="technicalDataSheet.speed" class="java.lang.String"/>
+	<field name="technicalDataSheet.frequency" class="java.lang.String"/>
+	<field name="technicalDataSheet.dpFlow" class="java.lang.Double"/>
+	<field name="technicalDataSheet.dpPressure" class="java.lang.Double"/>
+	<field name="technicalDataSheet.discharge" class="java.lang.String"/>
+	<field name="technicalDataSheet.fanModel" class="java.lang.String"/>
+	<field name="technicalDataSheet.performanceCurveNo" class="java.lang.String"/>
+	<field name="technicalDataSheet.consultant" class="java.lang.String"/>
+	<field name="technicalDataSheet.application" class="java.lang.String"/>
+	<field name="technicalDataSheet.tagNo" class="java.lang.String"/>
+	<field name="technicalDataSheet.offerNo" class="java.lang.String"/>
+	<field name="technicalDataSheet.testingStd" class="java.lang.String"/>
+	<field name="technicalDataSheet.spgr" class="java.lang.String"/>
+	<field name="technicalDataSheet.powerDp" class="java.lang.String"/>
+	<field name="technicalDataSheet.efficiencyDp" class="java.lang.Double"/>
+	<field name="technicalDataSheet.npshrDp" class="java.lang.String"/>
+	<field name="technicalDataSheet.npshA" class="java.lang.String"/>
+	<field name="technicalDataSheet.soh" class="java.lang.String"/>
+	<field name="technicalDataSheet.primeMoverPower" class="java.lang.Double"/>
+	<field name="technicalDataSheet.stage" class="java.lang.Integer"/>
+	<field name="technicalDataSheet.offerDate" class="java.lang.String"/>
+	<field name="technicalDataSheet.preparedBy" class="java.lang.String"/>
+	<field name="technicalDataSheet.companyAddress" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomFlow" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomHead" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomSpeed" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomFrequency" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomPower" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomEff" class="java.lang.String"/>
+	<field name="technicalDataSheet.qty" class="java.lang.Integer"/>
+	<field name="technicalDataSheet.uomSolidSize" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomDimension" class="java.lang.String"/>
+	<field name="technicalDataSheet.companyName" class="java.lang.String"/>
+	<field name="technicalDataSheet.logoPath" class="java.lang.String"/>
+	<field name="technicalDataSheet.logo1Path" class="java.lang.String"/>
+	<field name="technicalDataSheet.customerAddress" class="java.lang.String"/>
+	<field name="technicalDataSheet.enquiryDate" class="java.lang.String"/>
+	<field name="technicalDataSheet.reference" class="java.lang.String"/>
+	<field name="technicalDataSheet.fluidName" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomTemperature" class="java.lang.String"/>
+	<field name="technicalDataSheet.temperature" class="java.lang.Double"/>
+	<field name="technicalDataSheet.suctionPressure" class="java.lang.String"/>
+	<field name="technicalDataSheet.system" class="java.lang.String"/>
+	<field name="technicalDataSheet.pumpQtyinSystem" class="java.lang.String"/>
+	<field name="technicalDataSheet.fanDia" class="java.lang.String"/>
+	<field name="technicalDataSheet.powerDpMax" class="java.lang.String"/>
+	<field name="technicalDataSheet.pole" class="java.lang.String"/>
+	<field name="technicalDataSheet.fanType" class="java.lang.String"/>
+	<field name="technicalDataSheet.packing" class="java.lang.String"/>
+	<field name="technicalDataSheet.axisOfOperation" class="java.lang.String"/>
+	<field name="technicalDataSheet.lubrication" class="java.lang.String"/>
+	<field name="technicalDataSheet.mounting" class="java.lang.String"/>
+	<field name="technicalDataSheet.flangeSpecification" class="java.lang.String"/>
+	<field name="technicalDataSheet.bearingType" class="java.lang.String"/>
+	<field name="technicalDataSheet.rotation" class="java.lang.String"/>
+	<field name="technicalDataSheet.flow" class="java.lang.Double"/>
+	<field name="technicalDataSheet.head" class="java.lang.Double"/>
+	<field name="technicalDataSheet.overallEfficiency" class="java.lang.Double"/>
+	<field name="technicalDataSheet.uomPressure" class="java.lang.String"/>
+	<field name="technicalDataSheet.ratedCurrent" class="java.lang.Double"/>
+	<field name="technicalDataSheet.voltageTolerance" class="java.lang.String"/>
+	<field name="technicalDataSheet.effClass" class="java.lang.String"/>
+	<field name="technicalDataSheet.primemoverEff" class="java.lang.Double"/>
+	<field name="technicalDataSheet.degreeProtection" class="java.lang.String"/>
+	<field name="technicalDataSheet.insulationClass" class="java.lang.String"/>
+	<field name="technicalDataSheet.suction" class="java.lang.String"/>
+	<field name="data.A" class="java.lang.String"/>
+	<field name="data.B" class="java.lang.String"/>
+	<field name="userInput.Mechanical Shaft Seal" class="java.lang.String"/>
+	<field name="tbl14PrimemoverMaster.framesize" class="java.lang.String"/>
+	<field name="data.Weight" class="java.lang.String"/>
+	<field name="tbl14PrimemoverMaster.eff" class="java.lang.String"/>
+	<field name="tbl1401Motortype.pole" class="java.lang.String"/>
+	<field name="tbl14PrimemoverMaster.power" class="java.lang.String"/>
+	<field name="userInput.Insulation Class" class="java.lang.String"/>
+	<field name="userInput.Flange Standard" class="java.lang.String"/>
+	<field name="technicalDataSheet.startingMethod" class="java.lang.String"/>
+	<field name="technicalDataSheet.powerFactor" class="java.lang.Double"/>
+	<field name="technicalDataSheet.minTemperature" class="java.lang.Double"/>
+	<field name="technicalDataSheet.maxTemperature" class="java.lang.Double"/>
+	<field name="tbl1401Motortype.series" class="java.lang.String"/>
+	<field name="technicalDataSheet.aeroFoilDesign" class="java.lang.String"/>
+	<field name="technicalDataSheet.density" class="java.lang.String"/>
+	<field name="technicalDataSheet.building" class="java.lang.String"/>
+	<field name="technicalDataSheet.location" class="java.lang.String"/>
+	<field name="technicalDataSheet.quantityOfParticularFanType" class="java.lang.String"/>
+	<field name="technicalDataSheet.requestedCapacity" class="java.lang.String"/>
+	<field name="technicalDataSheet.requestedStaticPressure" class="java.lang.String"/>
+	<field name="technicalDataSheet.actualCapacity" class="java.lang.String"/>
+	<field name="technicalDataSheet.actualStaticPressure" class="java.lang.String"/>
+	<field name="technicalDataSheet.totalPressure" class="java.lang.Double"/>
+	<field name="technicalDataSheet.ratedSpeed" class="java.lang.Integer"/>
+	<field name="technicalDataSheet.criticalSpeedOfFan" class="java.lang.String"/>
+	<field name="technicalDataSheet.fanPowerAtRatedSpeed" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomDensity" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomFanPowerAtRatedSpeed" class="java.lang.String"/>
+	<field name="technicalDataSheet.staticEfficiency" class="java.lang.String"/>
+	<field name="technicalDataSheet.totalEfficiency" class="java.lang.String"/>
+	<field name="technicalDataSheet.impellerDiameter" class="java.lang.String"/>
+	<field name="technicalDataSheet.numberOfBladesInImpeller" class="java.lang.String"/>
+	<field name="technicalDataSheet.outletVelocity" class="java.lang.String"/>
+	<field name="technicalDataSheet.typeOfDriver" class="java.lang.String"/>
+	<field name="technicalDataSheet.impellerMaterial" class="java.lang.String"/>
+	<field name="technicalDataSheet.casingMaterial" class="java.lang.String"/>
+	<field name="technicalDataSheet.supportingMaterial" class="java.lang.String"/>
+	<field name="technicalDataSheet.selectedMotorRating" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomSelectedMotorRating" class="java.lang.String"/>
+	<field name="technicalDataSheet.noisLevelAt1mLevel" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomNoiseLevel" class="java.lang.String"/>
+	<field name="tbl14PrimemoverMaster.pole" class="java.lang.String"/>
+	<field name="technicalDataSheet.requestedDuty" class="java.lang.String"/>
+	<field name="technicalDataSheet.actualDuty" class="java.lang.String"/>
+	<field name="technicalDataSheet.vaneAngle" class="java.lang.String"/>
+	<field name="technicalDataSheet.pressure" class="java.lang.String"/>
+	<field name="technicalDataSheet.outletDynamicPressure" class="java.lang.Double"/>
+	<field name="technicalDataSheet.uomOutletVelocity" class="java.lang.String"/>
+	<field name="technicalDataSheet.efficiency" class="java.lang.String"/>
+	<field name="data.reportImage" class="java.lang.String"/>
+	<field name="data.C" class="java.lang.String"/>
+	<field name="data.D" class="java.lang.String"/>
+	<field name="data.E" class="java.lang.String"/>
+	<field name="technicalDataSheet.bladeType" class="java.lang.String"/>
+	<field name="technicalDataSheet.driveType" class="java.lang.String"/>
+	<field name="technicalDataSheet.motorRatedSpeed" class="java.lang.String"/>
+	<field name="technicalDataSheet.offerRev" class="java.lang.String"/>
+	<field name="soundData.soundDataArray[0].soundFrequency" class="java.lang.String"/>
+	<field name="soundData.soundDataArray[1].soundFrequency" class="java.lang.String"/>
+	<field name="soundData.soundDataArray[2].soundFrequency" class="java.lang.String"/>
+	<field name="soundData.soundDataArray[3].soundFrequency" class="java.lang.String"/>
+	<field name="soundData.soundDataArray[4].soundFrequency" class="java.lang.String"/>
+	<field name="soundData.soundDataArray[5].soundFrequency" class="java.lang.String"/>
+	<field name="soundData.soundDataArray[6].soundFrequency" class="java.lang.String"/>
+	<field name="soundData.soundDataArray[7].soundFrequency" class="java.lang.String"/>
+	<field name="soundData.soundDataArray[0].lwListInside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[1].lwListInside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[2].lwListInside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[3].lwListInside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[4].lwListInside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[5].lwListInside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[6].lwListInside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[7].lwListInside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[0].lwListOutside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[1].lwListOutside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[2].lwListOutside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[3].lwListOutside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[4].lwListOutside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[5].lwListOutside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[6].lwListOutside" class="java.lang.Double"/>
+	<field name="soundData.soundDataArray[7].lwListOutside" class="java.lang.Double"/>
+	<field name="soundData.lpOverallInside" class="java.lang.Double"/>
+	<field name="soundData.lpOverallOutside" class="java.lang.Double"/>
+	<field name="selectedCentrifugalFan.correctedDensityAtMinTemp" class="java.lang.String"/>
+	<field name="selectedCentrifugalFan.powerAtMinTemp" class="java.lang.String"/>
+	<field name="selectedCentrifugalFan.minTemperature" class="java.lang.String"/>
+	<field name="selectedCentrifugalFan.maxTempreture" class="java.lang.String"/>
+	<field name="selectedCentrifugalFan.fanGD2" class="java.lang.String"/>
+	<field name="selectedCentrifugalFan.elevation" class="java.lang.String"/>
+	<field name="selectionModel.dp_totalQty" class="java.lang.String"/>
+	<field name="selectedCentrifugalFan.totalEfficiency" class="java.lang.String"/>
+	<field name="selectedCentrifugalFan.dpEff" class="java.lang.String"/>
+	<background>
+		<band height="830" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="575" height="830" uuid="75973244-3ee2-4ea9-b852-7cdc6ae4bb69"/>
+			</rectangle>
+		</band>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="817" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="16" width="389" height="27" uuid="fcfc988c-aa4d-4842-9299-2de6d11a4191"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.companyName}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="442" y="10" width="123" height="45" uuid="23ae1472-c0b9-4cb9-aff9-aeb957026b8c"/>
+				<imageExpression><![CDATA[$F{technicalDataSheet.logoPath}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Opaque" x="9" y="149" width="207" height="15" backcolor="#999999" uuid="9b33fcce-5e42-45eb-a962-faeaf6156d23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Verdana" size="11" isBold="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[SYSTEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="114" width="60" height="11" uuid="87a336e7-3eb7-4de8-b664-3eaa3cf241a4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Enquiry Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="114" width="60" height="11" uuid="3fc6ef1b-ab39-42ad-b310-75c7a9e15106"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Tag Number :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="98" width="60" height="11" uuid="541446c7-e1d2-4bf3-ab55-7b68a7a58b2b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[OfferNo :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="523" width="60" height="11" uuid="615db871-07a4-4915-ada0-bb7d2ffe8c63"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Min. Tempreture]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="218" width="60" height="11" uuid="013aae47-7a9c-4e70-9acb-91bca244f8e2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Fan Speed]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="82" width="60" height="12" uuid="f1ff37eb-74ac-4523-af06-38e15ce15da4"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Address :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="68" width="60" height="12" uuid="c19d8197-7488-4073-9648-3adda3c4b234"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Client :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="354" y="68" width="220" height="12" uuid="21e643f2-26c7-4109-83a7-9f9d5a84b248"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.consultant}!=null && !$F{technicalDataSheet.consultant}.equals("")?$F{technicalDataSheet.consultant}:"-"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="81" width="575" height="1" uuid="6250c73a-c25e-4004-90e1-c8ac46f042ee"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="291" y="82" width="60" height="12" uuid="9a9ede90-a8cc-400f-bc79-8c0da0635f9b"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Project :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="68" width="60" height="12" uuid="bf56a35a-38b8-42f8-b10d-84c3f0c9a242"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Consultant :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="354" y="81" width="222" height="12" uuid="452863e7-8d5c-4356-8513-a60988ae8a88"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.project}!=null && !$F{technicalDataSheet.project}.equals("")?$F{technicalDataSheet.project}:"-"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="67" width="575" height="1" uuid="fe39a74d-fa68-4c4b-9727-4795901c33b5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="66" y="68" width="222" height="12" uuid="6555303a-b29d-488b-a9c4-a9d9107802ea"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.customerName}!=null && !$F{technicalDataSheet.customerName}.equals("")?$F{technicalDataSheet.customerName}:"-"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="111" width="575" height="1" uuid="d4604094-9419-4517-be00-ceb27bcb1801"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="95" width="575" height="1" uuid="3f6b2041-3fb0-4dbd-b2f8-4881c7618a46"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="66" y="82" width="222" height="11" uuid="ae7c8e66-7769-41f2-ba9b-62b8d917281c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.customerAddress}!=null && !$F{technicalDataSheet.customerAddress}.equals("")?$F{technicalDataSheet.customerAddress}:"-"]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="66" y="114" width="222" height="11" uuid="f11d3313-85a5-4e04-a247-63c3fcd20e46"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.enquiryDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="76" y="392" width="140" height="11" uuid="4b0b9e90-4d5c-4d59-91ba-316f4f5a90f0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{selectedCentrifugalFan.powerAtMinTemp}!=null && !$F{selectedCentrifugalFan.powerAtMinTemp}.equals("")?$F{selectedCentrifugalFan.powerAtMinTemp}+" "+$F{technicalDataSheet.uomPower}:"-"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="354" y="114" width="220" height="11" uuid="ca5ca2dd-8d72-46d2-b843-e6c2ddf0b43a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.tagNo}!=null && !$F{technicalDataSheet.tagNo}.equals("")?$F{technicalDataSheet.tagNo}:"-"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="354" y="98" width="80" height="11" uuid="f8152f9b-1313-418f-a366-070b96eea1d4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.offerNo}!=null && !$F{technicalDataSheet.offerNo}.equals("")?$F{technicalDataSheet.offerNo}:"-"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="523" width="140" height="11" uuid="47739e33-ac81-4c60-9771-908e6ad55bc6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{selectedCentrifugalFan.minTemperature}!=null && !$F{selectedCentrifugalFan.minTemperature}.equals("")?$F{selectedCentrifugalFan.minTemperature}+" °C":"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="43" width="250" height="18" uuid="6f19566b-4ffe-43b5-a9f6-c71e787a2540"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+					<font fontName="Verdana" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fan Selector - Technical Datasheet]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="382" width="1" height="1" uuid="bc477fa3-fcbb-4678-aec2-15eccbb9e22c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="4" y="98" width="60" height="11" uuid="e96fa6dc-1385-473b-9aeb-5d69a7f0e67b"/>
+				<textElement markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Offer Date :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="66" y="98" width="218" height="11" uuid="0d60b007-c61d-423c-ac48-4c278ff6f3ca"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.offerDate}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="233" y="164" width="332" height="409" uuid="d503d60b-fe95-4e16-af4d-108e2b63bb4e"/>
+				<imageExpression><![CDATA[$P{chart}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="218" width="140" height="11" uuid="3dee216c-f9cd-4501-a924-e8dfe87c4463"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.ratedSpeed}!=null && !$F{technicalDataSheet.ratedSpeed}.equals("")?$F{technicalDataSheet.ratedSpeed}+" "+$F{technicalDataSheet.uomSpeed}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="165" width="60" height="11" uuid="570712de-2fec-40c3-85b6-bfd7062b91aa"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Fan Type]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="165" width="140" height="11" uuid="8c7baca8-8ead-4f06-87f6-f48dff9025b3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.fanType}!=null && !$F{technicalDataSheet.fanType}.equals("")?$F{technicalDataSheet.fanType}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="465" width="60" height="11" uuid="e8231a32-ffc0-47b2-9bac-bd52706d9cf1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Fan Casing]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="292" width="60" height="11" uuid="9f1be067-67e6-4ecb-8ca3-e4cc2a15be7f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Requested Duty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="304" width="60" height="11" uuid="35760855-4dcb-4ece-b3b9-0531e29a424f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Actual Duty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="316" width="60" height="25" uuid="afafe208-96d8-4fb9-b952-4dfb026e1153"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Outlet dyanamic pressure]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="354" width="60" height="11" uuid="a8f88d3e-a521-4911-a81e-c6b85d5534ed"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Outlet Velocity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="366" width="60" height="25" uuid="82d37db9-6ca6-4f95-991e-d7a83ff3312d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Efficiency       (Total/Static)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="575" width="60" height="11" uuid="510947db-5193-434b-9475-326de3dc4cc9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Operating Environment]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="76" y="292" width="140" height="11" uuid="92851a1b-e4a0-4fd5-8583-d0af062ffac6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.flow}+" "+$F{technicalDataSheet.uomFlow}+" @ "+$F{technicalDataSheet.pressure}+" "+$F{technicalDataSheet.uomHead}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="76" y="304" width="140" height="11" uuid="bfdd8c9c-498c-408c-ba86-317af38cc173"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.dpFlow}+" "+$F{technicalDataSheet.uomFlow}+" @ "+$F{technicalDataSheet.dpPressure}+" "+$F{technicalDataSheet.uomHead}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="76" y="465" width="140" height="11" uuid="d2df680e-b497-478f-a109-8028519c834d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["IS2062 - Mild Steel"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="76" y="323" width="140" height="11" uuid="4b9780da-908a-44c4-a3c6-04f0646b421d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.##").format($F{technicalDataSheet.outletDynamicPressure})+" "+$F{technicalDataSheet.uomHead}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="76" y="354" width="140" height="11" uuid="6eb90252-e7de-40d7-aa25-f63021a5dff4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.outletVelocity}+" "+$F{technicalDataSheet.uomOutletVelocity}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="76" y="371" width="140" height="11" uuid="71af1761-cc02-4f66-bfc9-0cda84a26a06"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.##").format(Double.parseDouble($F{selectedCentrifugalFan.totalEfficiency})*100)+" % "+" / "+new java.text.DecimalFormat("#.##").format(Double.parseDouble($F{selectedCentrifugalFan.dpEff})*100)+" % "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="76" y="204" width="140" height="14" uuid="97dd9de0-aad5-468b-afb8-f9363353f6ac"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.fanModel}!=null && !$F{technicalDataSheet.fanModel}.equals("")?$F{technicalDataSheet.fanModel}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="204" width="60" height="12" uuid="1bd09c6f-1a64-44e1-99af-935d355f581c"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[FanModel :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="9" y="276" width="207" height="15" backcolor="#999999" uuid="9c380504-d2bc-4e11-ba25-0680fa0ab9f3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Verdana" size="11" isBold="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[PERFORMANCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="9" y="507" width="207" height="15" backcolor="#999999" uuid="70d0022b-a5d9-4021-9f00-764f8d55062a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Verdana" size="11" isBold="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[ENVIRONMENT]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="575" width="140" height="11" uuid="34fb2f48-cd7e-4cb0-9f6d-d5dca09ebfcb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Normal"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="288" y="148" width="207" height="15" backcolor="#999999" uuid="b5425456-1e89-4c74-a575-506d122b0c0d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Verdana" size="11" isBold="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[FAN PERFORMANCE CURVE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="127" width="575" height="1" uuid="60edaf74-e184-4d5f-8cc7-88454ae1ee28"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="9" y="449" width="207" height="15" backcolor="#999999" uuid="323942e2-7383-432d-ac21-a6fe1ca83af5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Verdana" size="11" isBold="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[MATERIAL OF CONSTRUCTION]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="76" y="477" width="140" height="11" uuid="5344ab14-b4ca-4d3a-b89d-b0da0c4d4e13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["IS 2062"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="477" width="60" height="11" uuid="5bb3cb0c-b179-4707-99ee-cb7086291f70"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Impeller]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="178" width="140" height="11" uuid="ab58eeb4-7187-48aa-8c01-b76cd006652d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.bladeType}!=null && !$F{technicalDataSheet.bladeType}.equals("")?$F{technicalDataSheet.bladeType}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="178" width="60" height="11" uuid="c176db95-f7e8-46f4-b2f7-6dfbbc3fc93c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Blade Type]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="191" width="140" height="11" uuid="6cea6f34-4e5f-40b9-95a1-dd00b45bb279"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.typeOfDriver}!=null && !$F{technicalDataSheet.typeOfDriver}.equals("")?$F{technicalDataSheet.typeOfDriver}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="191" width="60" height="11" uuid="ac0b29f3-695a-490a-bc10-d1e5640651e1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Drive Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="342" width="60" height="11" uuid="c58f1779-0949-4255-9ae4-f19ddbfe628e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Total Pressure]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="76" y="341" width="140" height="11" uuid="d2dad64b-26c9-48e5-a1d6-6a224d861bcc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.##").format($F{technicalDataSheet.totalPressure})+" "+$F{technicalDataSheet.uomHead}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="404" width="60" height="11" uuid="d5a67427-8f21-41ce-8de2-92c34128ac83"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Motor Rating]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="392" width="60" height="11" uuid="a5b4f397-cd3f-4648-9ec8-1080ffa88bf0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Rated Power]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="76" y="404" width="140" height="11" uuid="11b0cff6-4ca7-4400-902f-d9b25f83af30"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl14PrimemoverMaster.power}!=null && !$F{tbl14PrimemoverMaster.power}.equals("")?$F{tbl14PrimemoverMaster.power}+" "+$F{technicalDataSheet.uomPower}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="416" width="60" height="11" uuid="f0de7ce6-5ccc-4285-ad3e-ee5a98829483"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Motor RPM]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="76" y="416" width="140" height="11" uuid="81fcd8bb-e6eb-4ddd-945f-4a032dda64f3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.motorRatedSpeed}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="508" y="98" width="60" height="11" uuid="55eab318-47ef-4e58-ad2b-0a7dba5772a0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.offerRev}!=null && !$F{technicalDataSheet.offerRev}.equals("")?$F{technicalDataSheet.offerRev}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="455" y="98" width="50" height="11" uuid="07d2791d-a616-41bc-9b19-6bc3da7bf552"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Rev. No :]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="434" y="641" width="20" height="11" uuid="b55bffb1-c77c-4dd0-a943-fdfb27b9ae01"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[4].lwListInside})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="281" y="641" width="43" height="11" uuid="0e573e35-db1a-486d-b111-92dde65461e5"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[L w Inside]]></text>
+			</staticText>
+			<textField pattern="###0.00">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="434" y="626" width="20" height="11" uuid="ef62dd28-2979-4b00-a986-ce34799f5c6f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{soundData.soundDataArray[4].soundFrequency}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="379" y="626" width="20" height="11" uuid="925d2a0d-7b80-44cb-a48f-3af44e2fa969"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{soundData.soundDataArray[2].soundFrequency}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="490" y="626" width="20" height="11" uuid="30b1f7b9-c2f1-439a-b4dc-a6c05daa2892"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{soundData.soundDataArray[6].soundFrequency}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="324" y="612" width="213" height="11" uuid="7c8f0308-9c1d-472b-8e35-d6f460384fdf"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Sound Spectrum (Hz)]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="407" y="641" width="20" height="11" uuid="8a8361d0-c33b-4f37-bad6-0e0f26e64fac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[3].lwListInside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="462" y="641" width="20" height="11" uuid="aa3de917-b019-46a9-a087-64325e9214ef"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[5].lwListInside})]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="551" y="641" width="20" height="11" uuid="51866401-3f9d-41d1-9d46-3bfe4fdd522c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.lpOverallInside})]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="279" y="609" width="294" height="1" uuid="2e7939bf-4731-4c29-973e-1777cc77beae"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="279" y="669" width="294" height="1" uuid="b3a47ad4-00a4-4342-b66e-3a4369828baf"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField pattern="###0.00">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="462" y="626" width="20" height="11" uuid="04833564-e49e-442d-a4a1-e609379f3ebc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{soundData.soundDataArray[5].soundFrequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="379" y="641" width="20" height="11" uuid="ca66bdb1-59ca-4300-9181-d3eb96cf60f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[2].lwListInside})]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="517" y="626" width="20" height="11" uuid="f20ce623-fc02-40eb-9811-bb254ab3b184"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{soundData.soundDataArray[7].soundFrequency}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="352" y="626" width="20" height="11" uuid="288990f3-2fe7-40b4-a572-70c202c7456e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{soundData.soundDataArray[1].soundFrequency}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="538" y="612" width="35" height="11" uuid="ff35d1e0-e435-4996-b024-f74b2a014cbf"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[LPoverall
+]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="279" y="624" width="294" height="1" uuid="89ada645-4f95-45e2-a6e1-a93f4dcb2ad5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="279" y="639" width="294" height="1" uuid="9f25807b-3bd5-4127-9804-434b0d2567df"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="352" y="641" width="20" height="11" uuid="f80b090f-6c29-41d6-9fd0-ea68a3eb630c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[1].lwListInside})]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="324" y="641" width="20" height="11" uuid="256f0127-2a1c-41f2-9571-6c904e4ae10b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[0].lwListInside})]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="324" y="626" width="20" height="11" uuid="822573cc-7c2c-4e9e-9ddf-7a5208a04787"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{soundData.soundDataArray[0].soundFrequency}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="279" y="654" width="294" height="1" uuid="654d06de-0ba0-49e2-888d-c19b4d93d6e9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="551" y="656" width="20" height="11" uuid="0a5c5900-a26e-4e0c-bd90-8043f4db2bac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.lpOverallOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="517" y="641" width="20" height="11" uuid="84e1ae41-07c2-42bc-b489-05c2b2ab5878"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[7].lwListInside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="490" y="641" width="20" height="11" uuid="1b5d5ea0-f2b0-4294-9078-0009fa81ca27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[6].lwListInside})]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="407" y="626" width="20" height="11" uuid="af4851bc-ac49-4201-bf87-e6ff210e2e3d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{soundData.soundDataArray[3].soundFrequency}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="278" y="590" width="207" height="15" backcolor="#999999" uuid="66439c62-c852-46cf-8f19-42dd7b630539"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Verdana" size="11" isBold="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[ACOUSTICS
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="434" y="672" width="20" height="11" uuid="ae7ab8be-d826-4852-ae1a-535e39726bd9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[4].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="490" y="672" width="20" height="11" uuid="50bd8d14-95f0-412d-86d1-1d9a8d2090f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[6].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="279" y="684" width="294" height="1" uuid="6533dd85-8ac8-4a94-bb6d-2e765c1ffada"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="462" y="672" width="20" height="11" uuid="d3d2c08d-5271-4a53-84c7-8acf9bce97bf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[5].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="352" y="672" width="20" height="11" uuid="aec1b786-808d-45ad-b206-c8432113e038"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[1].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="517" y="672" width="20" height="11" uuid="945f7d7c-ee49-4a0c-a863-f933df5e489b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[7].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="407" y="672" width="20" height="11" uuid="c979b294-fdfa-41d0-a573-540db32639f2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[3].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="324" y="672" width="20" height="11" uuid="a138b0f1-298e-49f6-afce-dea09c4ba7d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[0].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="551" y="672" width="20" height="11" uuid="a23e5e40-9b00-4ed2-8111-562e5f9b9b4a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.lpOverallOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="379" y="672" width="20" height="11" uuid="d9d54e75-1054-42d6-ba0b-81c8b1e2f990"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[2].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="551" y="626" width="20" height="11" uuid="3a104099-8d06-4321-a2c9-e0d0a3205464"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[ Lw*]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="462" y="656" width="20" height="11" uuid="4198c118-5e96-4e01-b6e0-cca32c92a46c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[5].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="490" y="656" width="20" height="11" uuid="95a4aa82-3c3c-46e7-8628-56e73e280a63"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[6].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="379" y="656" width="20" height="11" uuid="525fd25e-ab26-4860-a630-7ca0adb37887"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[2].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="324" y="656" width="20" height="11" uuid="28fd6f95-a701-4e25-bb13-b7c55c20f5e5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[0].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="352" y="656" width="20" height="11" uuid="94d4fca6-0c87-4269-8331-7e85f54579a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[1].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="517" y="656" width="20" height="11" uuid="17749471-4516-4847-b26c-f200ef1405fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[7].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="407" y="656" width="20" height="11" uuid="25172271-39cd-4a8f-b902-1871a3ff0685"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[3].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="434" y="656" width="20" height="11" uuid="48a65300-950f-4141-ac74-260f644ed323"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.00").format($F{soundData.soundDataArray[4].lwListOutside})]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="278" y="609" width="1" height="76" uuid="53a654c6-c463-4c21-862a-896e31f5b1bf"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="573" y="609" width="1" height="76" uuid="9db44e2f-7d20-4a81-8b2a-eead25d136ab"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="281" y="656" width="43" height="11" uuid="f11415df-92ca-4db5-8df8-2d4cc0f2c23f"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[L w(inlet)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="281" y="671" width="43" height="11" uuid="e59b7b0a-4b91-41cd-87bf-ac846c87205c"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[L w(outlet)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="281" y="626" width="43" height="11" uuid="d8b7c9da-a4f9-4770-8273-3fc5663a6313"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Sound Freq.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="549" width="60" height="11" uuid="f9802dee-c53d-4ae0-a735-03463d4dc4b9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Density]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="549" width="140" height="11" uuid="6b638966-b4e8-4139-aa5c-9a08b4335413"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{selectedCentrifugalFan.correctedDensityAtMinTemp}!=null && !$F{selectedCentrifugalFan.correctedDensityAtMinTemp}.equals("")?$F{selectedCentrifugalFan.correctedDensityAtMinTemp}+" kg/m3":"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="536" width="60" height="11" uuid="cf43343f-f476-4002-b6a8-7121d1ed9593"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Max.Tempreture]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="536" width="140" height="11" uuid="cac4acbd-66ec-4d16-97e3-9374233b490c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{selectedCentrifugalFan.maxTempreture}!=null && !$F{selectedCentrifugalFan.maxTempreture}.equals("")?$F{selectedCentrifugalFan.maxTempreture}+" °C":"-"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="231" width="140" height="11" uuid="ed77f140-6753-4139-8f1c-283bb4b0fe10"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{selectedCentrifugalFan.fanGD2}!=null && !$F{selectedCentrifugalFan.fanGD2}.equals("")?$F{selectedCentrifugalFan.fanGD2}+" kg/m2":"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="231" width="60" height="11" uuid="2eb03580-a45d-431c-ab6e-43b94dcd57e1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Fan GD2]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="562" width="140" height="11" uuid="ba5b0798-0d4b-4d9d-b7a9-1ad362b54828"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{selectedCentrifugalFan.elevation}!=null && !$F{selectedCentrifugalFan.elevation}.equals("")?$F{selectedCentrifugalFan.elevation}+" m":"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="562" width="60" height="11" uuid="4777cd57-df80-4579-a537-388776d51cf0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Elevation]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="244" width="140" height="11" uuid="f0df7891-f9cd-4f93-871c-2f6e68c3e8d5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{selectionModel.dp_totalQty}!=null && !$F{selectionModel.dp_totalQty}.equals("")?$F{selectionModel.dp_totalQty}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="244" width="60" height="11" uuid="27c3d485-f09d-4d30-bbaf-1da69af07aa1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

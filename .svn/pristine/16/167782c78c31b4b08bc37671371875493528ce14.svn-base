@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="offerCoverLetter" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5d34fbac-0fe2-460c-9a91-95e9e95b7798">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="15"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="companyName" class="java.lang.String"/>
+	<parameter name="address1" class="java.lang.String"/>
+	<parameter name="contact" class="java.lang.String"/>
+	<parameter name="website" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="city" class="java.lang.String"/>
+	<parameter name="pincode" class="java.lang.String"/>
+	<parameter name="state" class="java.lang.String"/>
+	<parameter name="country" class="java.lang.String"/>
+	<parameter name="offerId" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_23_offerRev."coverLetterContent" AS tbl_23_offerRev_coverLetterContent,
+     tbl_23_offerRev."showCoveringLetter" AS tbl_23_offerRev_showCoveringLetter,
+     tbl_25_customerMaster."customerName" AS tbl_25_customerMaster_customerName,
+     tbl_25_customerMaster."customerAddress1" AS tbl_25_customerMaster_customerAddress1,
+     tbl_23_offerRev."id" AS tbl_23_offerRev_id,
+     tbl_23_offerRev."reference" AS tbl_23_offerRev_reference,
+     tbl_25_customerMaster."email" AS tbl_25_customerMaster_email
+FROM
+     "dbo"."tbl_25_customerMaster" tbl_25_customerMaster INNER JOIN "dbo"."tbl_23_offerRev" tbl_23_offerRev ON tbl_25_customerMaster."customerId" = tbl_23_offerRev."customer_id" WHERE tbl_23_offerRev."id"=$P{offerId}]]>
+	</queryString>
+	<field name="tbl_23_offerRev_coverLetterContent" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_showCoveringLetter" class="java.lang.Boolean"/>
+	<field name="tbl_25_customerMaster_customerName" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_customerAddress1" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_id" class="java.lang.Integer"/>
+	<field name="tbl_23_offerRev_reference" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_email" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="84" splitType="Stretch">
+			<image vAlign="Middle">
+				<reportElement x="451" y="1" width="102" height="80" uuid="11fd7bf6-6e02-42a0-9fab-6a1f01d6f22c"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="2" y="1" width="435" height="20" forecolor="#000000" backcolor="#000000" uuid="f1ff40fb-df22-41f4-bc46-19298cf8d12e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Arial" size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="21" width="435" height="12" uuid="b80c893e-1881-40bc-a548-eb44e2f3405d"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{address1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="45" width="435" height="12" uuid="c0e5dc8c-8642-4383-a782-10ce2216e721"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Phone:"+$P{contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="69" width="435" height="12" uuid="78420e29-7dc4-426e-9036-5c3828c23fe7"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{website}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="57" width="435" height="12" uuid="ff5942cc-af36-488d-bb54-b1a6e83b22dd"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="33" width="435" height="12" uuid="5e407a05-2ec8-43d5-99ac-c1a02a5ecbc0"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{city}+" - "+$P{pincode}+" , "+$P{state}+" , "+$P{country}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="11" width="73" height="15" isRemoveLineWhenBlank="true" uuid="78138878-5c26-4768-b9f8-8d7c89cbc3ed">
+					<printWhenExpression><![CDATA[$F{tbl_23_offerRev_reference}!=null && !$F{tbl_23_offerRev_reference}.equals("")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Reference # :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="75" y="11" width="327" height="15" isRemoveLineWhenBlank="true" uuid="e2e683dd-af58-4476-b0fd-e72be8d2dc5c"/>
+				<textFieldExpression><![CDATA[$F{tbl_23_offerRev_reference}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2" y="56" width="400" height="15" isRemoveLineWhenBlank="true" uuid="79c570b2-e543-4158-a497-c2a51ab21591"/>
+				<textFieldExpression><![CDATA[$F{tbl_25_customerMaster_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="26" width="400" height="15" isRemoveLineWhenBlank="true" uuid="108ce455-989f-4cf0-8880-f3fef923e5e8"/>
+				<textFieldExpression><![CDATA[$F{tbl_25_customerMaster_customerName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2" y="41" width="400" height="15" isRemoveLineWhenBlank="true" uuid="4d369a17-9778-4653-8ead-806d863bca63"/>
+				<textFieldExpression><![CDATA[$F{tbl_25_customerMaster_customerAddress1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="">
+				<reportElement isPrintRepeatedValues="false" x="2" y="3" width="551" height="15" isPrintWhenDetailOverflows="true" uuid="38a37ffe-123d-4ea8-8701-625a98758b86"/>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA[$F{tbl_23_offerRev_coverLetterContent}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

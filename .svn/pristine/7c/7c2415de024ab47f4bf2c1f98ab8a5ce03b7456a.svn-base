@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="quatation" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" isFloatColumnFooter="true" uuid="f9e5c958-9e84-49ef-9422-c0e2658aa5a6">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="301"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="companyName" class="java.lang.String"/>
+	<parameter name="address1" class="java.lang.String"/>
+	<parameter name="contact" class="java.lang.String"/>
+	<parameter name="pincode" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="website" class="java.lang.String"/>
+	<parameter name="city" class="java.lang.String"/>
+	<parameter name="state" class="java.lang.String"/>
+	<parameter name="country" class="java.lang.String"/>
+	<parameter name="spareOfferMasterId" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_41_spareoffer_master."id" AS tbl_41_spareoffer_master_id,
+     tbl_41_spareoffer_master."customerId" AS tbl_41_spareoffer_master_customerId,
+     tbl_41_spareoffer_master."enquiry_date" AS tbl_41_spareoffer_master_enquiry_date,
+     tbl_41_spareoffer_master."enquiry_reference" AS tbl_41_spareoffer_master_enquiry_reference,
+     tbl_41_spareoffer_master."quotation_date" AS tbl_41_spareoffer_master_quotation_date,
+     tbl_41_spareoffer_master."logNo" AS tbl_41_spareoffer_master_logNo,
+     tbl_41_spareoffer_master."runningNo" AS tbl_41_spareoffer_master_runningNo,
+     tbl_41_spareoffer_master."pumpModel" AS tbl_41_spareoffer_master_pumpModel,
+     tbl_41_spareoffer_master."showDiscount" AS tbl_41_spareoffer_master_showDiscount,
+     tbl_41_spareoffer_master."showPrice" AS tbl_41_spareoffer_master_showPrice,
+     tbl_41_spareoffer_master."company" AS tbl_41_spareoffer_master_company,
+     tbl_42_spareoffer_line."id" AS tbl_42_spareoffer_line_id,
+     tbl_42_spareoffer_line."spareOfferMasterId" AS tbl_42_spareoffer_line_spareOfferMasterId,
+     tbl_42_spareoffer_line."itemId" AS tbl_42_spareoffer_line_itemId,
+     tbl_42_spareoffer_line."description" AS tbl_42_spareoffer_line_description,
+     tbl_42_spareoffer_line."qty" AS tbl_42_spareoffer_line_qty,
+     tbl_42_spareoffer_line."price" AS tbl_42_spareoffer_line_price,
+     tbl_42_spareoffer_line."discount" AS tbl_42_spareoffer_line_discount,
+     tbl_42_spareoffer_line."subTotal" AS tbl_42_spareoffer_line_subTotal,
+     tbl_42_spareoffer_line."remarks" AS tbl_42_spareoffer_line_remarks,
+     tbl_25_customerMaster."customerName" AS tbl_25_customerMaster_customerName,
+     tbl_25_customerMaster."customerAddress1" AS tbl_25_customerMaster_customerAddress1,
+     tbl_25_customerMaster."customerAddress2" AS tbl_25_customerMaster_customerAddress2,
+     tbl_25_customerMaster."city" AS tbl_25_customerMaster_city,
+     tbl_25_customerMaster."state" AS tbl_25_customerMaster_state,
+     tbl_25_customerMaster."Country" AS tbl_25_customerMaster_Country,
+     tbl_25_customerMaster."pincode" AS tbl_25_customerMaster_pincode
+FROM
+     "dbo"."tbl_41_spareoffer_master" tbl_41_spareoffer_master INNER JOIN "dbo"."tbl_42_spareoffer_line" tbl_42_spareoffer_line ON tbl_41_spareoffer_master."id" = tbl_42_spareoffer_line."spareOfferMasterId"
+     INNER JOIN "dbo"."tbl_25_customerMaster" tbl_25_customerMaster ON tbl_41_spareoffer_master."customerId" = tbl_25_customerMaster."customerId" where tbl_41_spareoffer_master."id" =$P{spareOfferMasterId}]]>
+	</queryString>
+	<field name="tbl_41_spareoffer_master_id" class="java.lang.Integer"/>
+	<field name="tbl_41_spareoffer_master_customerId" class="java.lang.Integer"/>
+	<field name="tbl_41_spareoffer_master_enquiry_date" class="java.sql.Date"/>
+	<field name="tbl_41_spareoffer_master_enquiry_reference" class="java.lang.String"/>
+	<field name="tbl_41_spareoffer_master_quotation_date" class="java.sql.Date"/>
+	<field name="tbl_41_spareoffer_master_logNo" class="java.lang.String"/>
+	<field name="tbl_41_spareoffer_master_runningNo" class="java.lang.Integer"/>
+	<field name="tbl_41_spareoffer_master_pumpModel" class="java.lang.String"/>
+	<field name="tbl_41_spareoffer_master_showDiscount" class="java.lang.Boolean"/>
+	<field name="tbl_41_spareoffer_master_showPrice" class="java.lang.Boolean"/>
+	<field name="tbl_41_spareoffer_master_company" class="java.lang.String"/>
+	<field name="tbl_42_spareoffer_line_id" class="java.lang.Integer"/>
+	<field name="tbl_42_spareoffer_line_spareOfferMasterId" class="java.lang.Integer"/>
+	<field name="tbl_42_spareoffer_line_itemId" class="java.lang.String"/>
+	<field name="tbl_42_spareoffer_line_description" class="java.lang.String"/>
+	<field name="tbl_42_spareoffer_line_qty" class="java.math.BigDecimal"/>
+	<field name="tbl_42_spareoffer_line_price" class="java.math.BigDecimal"/>
+	<field name="tbl_42_spareoffer_line_discount" class="java.math.BigDecimal"/>
+	<field name="tbl_42_spareoffer_line_subTotal" class="java.math.BigDecimal"/>
+	<field name="tbl_42_spareoffer_line_remarks" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_customerName" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_customerAddress1" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_customerAddress2" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_city" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_state" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_Country" class="java.lang.String"/>
+	<field name="tbl_25_customerMaster_pincode" class="java.lang.String"/>
+	<variable name="tbl_42_spareoffer_line_subTotal_1" class="java.lang.Double" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{tbl_42_spareoffer_line_subTotal}]]></variableExpression>
+	</variable>
+	<group name="spareOfferMaster">
+		<groupExpression><![CDATA[$F{tbl_41_spareoffer_master_id}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="16">
+				<textField>
+					<reportElement uuid="cd9f4e7f-f04a-43fb-b6db-6da694ac8335" x="506" y="0" width="48" height="15" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[$F{tbl_41_spareoffer_master_showPrice}]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$V{tbl_42_spareoffer_line_subTotal_1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="d5a3c267-4346-4114-802c-e8dca3ccbcc7" x="390" y="0" width="115" height="15" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[$F{tbl_41_spareoffer_master_showPrice}]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right" markup="none">
+						<font isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Grand Total]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="137" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement uuid="d3f88a7f-c7e0-41d5-99ab-2358d3e3da86" x="451" y="1" width="102" height="78"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="a6ce6b76-d164-4fb4-b950-30112f5e9aaf" x="3" y="1" width="435" height="22"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="33c28530-28fc-440e-b0d1-882ea763a4d6" x="3" y="21" width="435" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{address1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fb3fdfbe-f6c7-48f9-81da-154e56818ef9" x="3" y="36" width="435" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{city}+" - "+$P{pincode}+" , "+$P{state}+" , "+$P{country}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="172f7102-73cb-4674-b35d-c21751e1f6fa" x="3" y="51" width="435" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["Phone :"+$P{contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dee1148e-5a9a-4557-a5b4-2779343861e8" x="3" y="67" width="435" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["email: "+$P{email}+" Website: "+$P{website}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="d6b5aabc-450c-4937-9985-b8870ef9799f" positionType="Float" x="1" y="86" width="553" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<elementGroup>
+				<textField isStretchWithOverflow="true" pattern="d/M/yyyy">
+					<reportElement uuid="9eeaecb1-7faf-453e-86a8-acb9d452cef8" positionType="Float" stretchType="RelativeToTallestObject" x="337" y="103" width="215" height="12" isPrintInFirstWholeBand="true" forecolor="#000000"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_41_spareoffer_master_quotation_date}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="d36454a4-ef8e-41d7-b226-4a506dfe70c2" positionType="Float" stretchType="RelativeToTallestObject" x="281" y="103" width="50" height="12" isPrintInFirstWholeBand="true" forecolor="#000000"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Date :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement uuid="49a8d1d3-6d92-421c-8611-8ae88e00c961" positionType="Float" stretchType="RelativeToTallestObject" x="56" y="103" width="215" height="12" isPrintInFirstWholeBand="true" forecolor="#000000"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_25_customerMaster_customerAddress1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="5cbc4b09-05d3-421c-88ab-66640ceb3b67" positionType="Float" stretchType="RelativeToTallestObject" x="3" y="103" width="50" height="12" isPrintInFirstWholeBand="true" forecolor="#000000"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Address :]]></text>
+				</staticText>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement uuid="f762a4eb-481e-4be7-83a2-a62eaaf1c4ba" positionType="Float" stretchType="RelativeToTallestObject" x="281" y="88" width="50" height="12" isPrintInFirstWholeBand="true" forecolor="#000000"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Quote # :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="53e24f54-1a92-4521-b4a0-4e2ecd6d2778" positionType="Float" stretchType="RelativeToTallestObject" x="337" y="88" width="215" height="12" isPrintInFirstWholeBand="true" forecolor="#000000"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_41_spareoffer_master_logNo}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="9032c30f-b64e-4386-802d-f26cad9d913f" positionType="Float" stretchType="RelativeToTallestObject" x="56" y="88" width="215" height="12" isPrintInFirstWholeBand="true" forecolor="#000000"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_25_customerMaster_customerName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="d073c7e7-ef2e-46ab-9170-11531d20de5b" positionType="Float" stretchType="RelativeToTallestObject" x="3" y="88" width="50" height="12" isPrintInFirstWholeBand="true" forecolor="#000000"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<text><![CDATA[Customer :]]></text>
+				</staticText>
+			</elementGroup>
+			<elementGroup>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement uuid="a6975a49-1715-40d9-ae56-3fa66b719955" positionType="Float" stretchType="RelativeToTallestObject" x="56" y="117" width="215" height="12" isPrintInFirstWholeBand="true" forecolor="#000000"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tbl_25_customerMaster_city}+"-"+$F{tbl_25_customerMaster_pincode}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<line>
+				<reportElement uuid="bb1a48c0-184c-4da7-93a8-58b2d7464aae" positionType="Float" x="1" y="131" width="553" height="1" forecolor="#000000"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="10f632f9-4467-401c-adbc-13d6023f1499" positionType="Float" stretchType="RelativeToTallestObject" x="1" y="86" width="1" height="45"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="1445c038-0f9c-4cd7-a0bf-fc9510f581ec" positionType="Float" stretchType="RelativeToTallestObject" x="278" y="86" width="1" height="45"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="295a7b97-8d73-4bd9-809f-8916b19e4bda" positionType="Float" stretchType="RelativeToTallestObject" x="554" y="86" width="1" height="45"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="20136618-5c13-464d-a65a-44da07d29ec0" positionType="Float" x="1" y="101" width="553" height="1" forecolor="#000000"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="f14118d0-c93b-4df4-8949-fd0b945e2f6b" positionType="Float" x="1" y="116" width="553" height="1" forecolor="#000000"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="c0d12471-2ce3-419b-a7c9-81a7ff36de74" mode="Opaque" x="0" y="0" width="555" height="15" forecolor="#2969B0" backcolor="#2969B0"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="078c82cb-97e9-4dcf-b29e-2cc398be7408" mode="Transparent" x="28" y="0" width="51" height="15" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Item Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8b9bd152-df38-4812-9a5d-82cd8666b833" mode="Transparent" x="79" y="0" width="157" height="15" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2bb7175a-88f8-454e-be19-1f8ebe497d7e" mode="Transparent" x="390" y="0" width="34" height="15" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e88e47d4-bd79-4cda-bfc7-f07bfd5913a9" mode="Transparent" x="425" y="0" width="45" height="15" forecolor="#FFFFFF">
+					<printWhenExpression><![CDATA[$F{tbl_41_spareoffer_master_showPrice}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Price/Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7b9a3202-1eaa-4291-bc35-be6cfe17d68b" mode="Transparent" x="470" y="0" width="35" height="15" forecolor="#FFFFFF">
+					<printWhenExpression><![CDATA[$F{tbl_41_spareoffer_master_showDiscount}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="630a9ac2-8333-46bc-9b3d-594e55122325" mode="Transparent" x="506" y="0" width="48" height="15" forecolor="#FFFFFF">
+					<printWhenExpression><![CDATA[$F{tbl_41_spareoffer_master_showPrice}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Sub Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6103c42-858a-4fbf-b770-7bc5ff92a867" mode="Transparent" x="237" y="0" width="153" height="15" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Remarks]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2e992e90-7073-4612-8072-c2237af75e00" mode="Transparent" x="0" y="0" width="28" height="15" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Sr.No]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="6463b5e0-269e-4d32-9d22-66ca09ace639" x="28" y="0" width="51" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_42_spareoffer_line_itemId}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="c267f512-dc94-47e0-9f12-57b72ece295a" x="79" y="0" width="157" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_42_spareoffer_line_description}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="7c3a307a-c8c4-4b3c-8614-8195b0b4dc16" x="390" y="0" width="34" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_42_spareoffer_line_qty}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="df096c1a-2d21-4d98-8a5f-c3fe460ed91c" x="425" y="0" width="45" height="20">
+					<printWhenExpression><![CDATA[$F{tbl_41_spareoffer_master_showPrice}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_42_spareoffer_line_price}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="8b3ad4f6-39e4-4c86-8e93-70443d3fdf0a" x="470" y="0" width="35" height="20">
+					<printWhenExpression><![CDATA[$F{tbl_41_spareoffer_master_showDiscount}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_42_spareoffer_line_discount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="7ac76fb0-2d44-4224-9f68-8d4d24fb2a4f" x="506" y="0" width="48" height="20">
+					<printWhenExpression><![CDATA[$F{tbl_41_spareoffer_master_showPrice}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_42_spareoffer_line_subTotal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="b98053b5-c938-4bed-abc5-b6038a9cd45a" x="237" y="0" width="153" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_42_spareoffer_line_remarks}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="6810a1a3-2b95-4776-8328-c51de9afe021" x="0" y="0" width="28" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="d43b94dc-119d-42f9-a4a9-ba71ed30a623" positionType="Float" x="0" y="21" width="555" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Immediate"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement uuid="6978f0e9-1fec-4af5-9faf-db8c1163d505" x="203" y="4" width="80" height="10" forecolor="#969491"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Verdana" size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="b05579fc-a788-44f3-8d57-0aa198d24fef" x="283" y="4" width="40" height="10" forecolor="#969491"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Verdana" size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement uuid="049a8a5e-d930-4085-b7d4-6f6b9946ff70" x="451" y="4" width="100" height="10" forecolor="#969491"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Verdana" size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8d510cc5-dfa2-4435-bf0b-ec8a035aa3bd" x="5" y="4" width="99" height="10" forecolor="#969491"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Verdana" size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Printed By "+$P{companyName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="61" splitType="Immediate">
+			<line>
+				<reportElement uuid="3fd9c711-7c7a-4950-afab-9123a8efe09b" x="0" y="0" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<frame>
+				<reportElement uuid="ac9af2bc-107d-4b6d-8fb1-234281c45abd" positionType="Float" mode="Transparent" x="2" y="17" width="551" height="41" forecolor="#FFFFFF"/>
+				<staticText>
+					<reportElement uuid="6acc86d1-be31-4fe1-a15e-4be881660e33" positionType="Float" x="3" y="29" width="77" height="10" isPrintWhenDetailOverflows="true" forecolor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Verdana" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Prepared by]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="8997c2d9-3e89-450f-a21c-dd049928c8d4" positionType="Float" x="244" y="29" width="64" height="10" isPrintWhenDetailOverflows="true" forecolor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Verdana" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Checked By]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="a908cea2-729d-4712-be28-5b3e1d3a3e4f" positionType="Float" x="471" y="29" width="76" height="10" isPrintWhenDetailOverflows="true" forecolor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Verdana" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Approved By ]]></text>
+				</staticText>
+			</frame>
+			<subreport>
+				<reportElement uuid="1f82d9a1-dd97-497e-8893-f673109a544c" x="3" y="2" width="546" height="12"/>
+				<subreportParameter name="spareOfferMasterId">
+					<subreportParameterExpression><![CDATA[$F{tbl_41_spareoffer_master_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["termConditions_subreport_Spares.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="offerRevSubReportJdbc" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ba8f89a8-7377-4b42-9558-e5b8fa3b086a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="offerRevId" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_23_offerRev."offerNoId" AS tbl_23_offerRev_offerNoId,
+     tbl_23_offerRev."rev" AS tbl_23_offerRev_rev,
+     tbl_23_offerRev."lineTotal" AS tbl_23_offerRev_lineTotal,
+     tbl_23_offerRev."addonTotal" AS tbl_23_offerRev_addonTotal,
+     tbl_23_offerRev."factorTotal" AS tbl_23_offerRev_factorTotal,
+     tbl_23_offerRev."offerTotal" AS tbl_23_offerRev_offerTotal,
+     tbl_23_offerRev."id" AS tbl_23_offerRev_id
+FROM
+     "dbo"."tbl_23_offerRev" tbl_23_offerRev
+WHERE
+      tbl_23_offerRev."id" = $P{offerRevId}]]>
+	</queryString>
+	<field name="tbl_23_offerRev_offerNoId" class="java.lang.Integer"/>
+	<field name="tbl_23_offerRev_rev" class="java.lang.String"/>
+	<field name="tbl_23_offerRev_lineTotal" class="java.math.BigDecimal"/>
+	<field name="tbl_23_offerRev_addonTotal" class="java.math.BigDecimal"/>
+	<field name="tbl_23_offerRev_factorTotal" class="java.math.BigDecimal"/>
+	<field name="tbl_23_offerRev_offerTotal" class="java.math.BigDecimal"/>
+	<field name="tbl_23_offerRev_id" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="16" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="2" y="0" width="150" height="15" backcolor="#B3E1DA" uuid="e2fc9d81-4584-4c8b-af57-cb02e19c8a0e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="10" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Offer Total]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="0" width="460" height="13" uuid="225efc48-b4c0-4eaf-9f36-b33139ed5690"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none"/>
+				<text><![CDATA[Total Offer Price]]></text>
+			</staticText>
+			<textField pattern="###0.00">
+				<reportElement x="462" y="0" width="93" height="13" uuid="9e858e22-a974-47fa-add3-673bae4ed570"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_23_offerRev_offerTotal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="quatation_subreport1" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true" uuid="542958d3-7b24-4914-bc2e-396b00a958e1">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1" fill="Solid" fontName="Verdana" fontSize="9" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="Default"/>
+	<style name="Style_1"/>
+	<parameter name="showDiscount" class="java.lang.Boolean"/>
+	<parameter name="showPriceBreakUp" class="java.lang.Boolean"/>
+	<parameter name="offerPump_id" class="java.lang.Integer"/>
+	<parameter name="printPricingDetails" class="java.lang.Boolean"/>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_28_selected_pricing."id" AS tbl_28_selected_pricing_id,
+     tbl_28_selected_pricing."offerPump_id" AS tbl_28_selected_pricing_offerPump_id,
+     tbl_28_selected_pricing."sorting" AS tbl_28_selected_pricing_sorting,
+     tbl_28_selected_pricing."itemName" AS tbl_28_selected_pricing_itemName,
+     tbl_28_selected_pricing."description" AS tbl_28_selected_pricing_description,
+     tbl_28_selected_pricing."qty" AS tbl_28_selected_pricing_qty,
+     tbl_28_selected_pricing."source" AS tbl_28_selected_pricing_source,
+     tbl_28_selected_pricing."discount" AS tbl_28_selected_pricing_discount,
+     tbl_28_selected_pricing."articleNo" AS tbl_28_selected_pricing_articleNo,
+     tbl_28_selected_pricing."pricePerQty" AS tbl_28_selected_pricing_pricePerQty,
+     tbl_28_selected_pricing."subTotal" AS tbl_28_selected_pricing_subTotal,
+     tbl_28_selected_pricing."scope" AS tbl_28_selected_pricing_scope,
+     tbl_28_selected_pricing."groupClass" AS tbl_28_selected_pricing_groupClass,
+     tbl_28_selected_pricing."createdBy" AS tbl_28_selected_pricing_createdBy,
+     tbl_28_selected_pricing."createdDate" AS tbl_28_selected_pricing_createdDate,
+     tbl_28_selected_pricing."modifiedBy" AS tbl_28_selected_pricing_modifiedBy,
+     tbl_28_selected_pricing."modifiedDate" AS tbl_28_selected_pricing_modifiedDate,
+     tbl_28_selected_pricing."company" AS tbl_28_selected_pricing_company,
+     tbl_28_selected_pricing."recordType" AS tbl_28_selected_pricing_recordType,
+     tbl_28_selected_pricing."make" AS tbl_28_selected_pricing_make,
+     tbl_28_selected_pricing."margin" AS tbl_28_selected_pricing_margin,
+     tbl_28_selected_pricing."applyFactor" AS tbl_28_selected_pricing_applyFactor,
+     tbl_28_selected_pricing."totalOfferFactor" AS tbl_28_selected_pricing_totalOfferFactor
+FROM
+     "dbo"."tbl_28_selected_pricing" tbl_28_selected_pricing
+where  tbl_28_selected_pricing."offerPump_id" =$P{offerPump_id}]]>
+	</queryString>
+	<field name="tbl_28_selected_pricing_id" class="java.lang.Integer"/>
+	<field name="tbl_28_selected_pricing_offerPump_id" class="java.lang.Integer"/>
+	<field name="tbl_28_selected_pricing_sorting" class="java.lang.Integer"/>
+	<field name="tbl_28_selected_pricing_itemName" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_description" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_qty" class="java.lang.Integer"/>
+	<field name="tbl_28_selected_pricing_source" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_discount" class="java.math.BigDecimal"/>
+	<field name="tbl_28_selected_pricing_articleNo" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_pricePerQty" class="java.math.BigDecimal"/>
+	<field name="tbl_28_selected_pricing_subTotal" class="java.math.BigDecimal"/>
+	<field name="tbl_28_selected_pricing_scope" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_groupClass" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_createdBy" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_createdDate" class="java.sql.Date"/>
+	<field name="tbl_28_selected_pricing_modifiedBy" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_modifiedDate" class="java.sql.Date"/>
+	<field name="tbl_28_selected_pricing_company" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_recordType" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_make" class="java.lang.String"/>
+	<field name="tbl_28_selected_pricing_margin" class="java.math.BigDecimal"/>
+	<field name="tbl_28_selected_pricing_applyFactor" class="java.lang.Boolean"/>
+	<field name="tbl_28_selected_pricing_totalOfferFactor" class="java.math.BigDecimal"/>
+	<sortField name="tbl_28_selected_pricing_sorting"/>
+	<variable name="actualPricePerQty" class="java.lang.Double">
+		<variableExpression><![CDATA[($F{tbl_28_selected_pricing_pricePerQty}.doubleValue()/(1-($F{tbl_28_selected_pricing_margin}.doubleValue()/100)))*($F{tbl_28_selected_pricing_applyFactor}?$F{tbl_28_selected_pricing_totalOfferFactor}.doubleValue():1)]]></variableExpression>
+	</variable>
+	<variable name="scopeOfSupply" class="java.lang.String">
+		<variableExpression><![CDATA[$F{tbl_28_selected_pricing_scope}.equals( "Yes" )?($V{scopeOfSupply}+" "+($F{tbl_28_selected_pricing_itemName}+" "+$F{tbl_28_selected_pricing_description}+",")):$V{scopeOfSupply}]]></variableExpression>
+		<initialValueExpression><![CDATA[""]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Style_1" x="65" y="0" width="275" height="15" uuid="4cdde496-9f26-4e6a-8431-b7dce18a5108"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_28_selected_pricing_itemName}+" "+$F{tbl_28_selected_pricing_description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="340" y="0" width="19" height="15" uuid="8c736dda-a81d-4d7a-8e78-8c7bf82f5d5c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_28_selected_pricing_qty}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="379" y="0" width="61" height="15" uuid="025c504f-d17a-4a1d-a9c7-ff78caf903d9">
+					<printWhenExpression><![CDATA[$P{showPriceBreakUp}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{actualPricePerQty}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0 %" isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="440" y="0" width="50" height="15" uuid="e00d7af1-cbbb-479e-960e-6f2651bc1e59">
+					<printWhenExpression><![CDATA[$P{showDiscount}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_28_selected_pricing_discount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="490" y="0" width="65" height="15" uuid="a7905ee1-e0c1-4338-9473-2612bd3217d8">
+					<printWhenExpression><![CDATA[$P{showPriceBreakUp}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_28_selected_pricing_subTotal}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" mode="Transparent" x="0" y="0" width="65" height="15" uuid="4b5d9866-5cf6-48bf-804e-5ed26858fb09"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_28_selected_pricing_articleNo}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="77" y="15" width="295" height="16" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="84629bca-8dba-45d5-abfd-cf59c3166049">
+					<printWhenExpression><![CDATA[false]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="selectedPricingId">
+					<subreportParameterExpression><![CDATA[$F{tbl_28_selected_pricing_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["quatationSelectedPricing.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="359" y="0" width="20" height="15" uuid="3985203f-26f7-409b-ba04-f1a2e3c2e668"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Nos]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

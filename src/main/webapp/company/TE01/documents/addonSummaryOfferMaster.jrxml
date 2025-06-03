@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="quatation_subreport1" pageWidth="554" pageHeight="802" columnWidth="554" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true" uuid="9e77b808-9aa1-464e-bfb4-c278a22367c9">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="showPrice" class="java.lang.Boolean"/>
+	<parameter name="offerId" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_30_offerPriceAddon."offerId" AS tbl_30_offerPriceAddon_offerId,
+     tbl_30_offerPriceAddon."articleNo" AS tbl_30_offerPriceAddon_articleNo,
+     tbl_30_offerPriceAddon."description" AS tbl_30_offerPriceAddon_description,
+     tbl_30_offerPriceAddon."price" AS tbl_30_offerPriceAddon_price,
+     tbl_30_offerPriceAddon."id" AS tbl_30_offerPriceAddon_id
+FROM
+     "dbo"."tbl_30_offerPriceAddon" tbl_30_offerPriceAddon
+WHERE
+     tbl_30_offerPriceAddon."offerId" = $P{offerId}]]>
+	</queryString>
+	<field name="tbl_30_offerPriceAddon_offerId" class="java.lang.Integer"/>
+	<field name="tbl_30_offerPriceAddon_articleNo" class="java.lang.String"/>
+	<field name="tbl_30_offerPriceAddon_description" class="java.lang.String"/>
+	<field name="tbl_30_offerPriceAddon_price" class="java.math.BigDecimal"/>
+	<field name="tbl_30_offerPriceAddon_id" class="java.lang.Integer"/>
+	<columnHeader>
+		<band height="15">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="15" forecolor="#2969B0" backcolor="#2969B0" uuid="7d97fc1b-eef5-43ad-b1fb-56c25df8c194"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="209" height="15" forecolor="#FFFFFF" uuid="e872c6e5-19e9-4ef6-9478-d152c132b66c"/>
+				<textElement>
+					<font fontName="Verdana" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Offer Additional Items/Services]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="68" y="0" width="400" height="15" uuid="28d291b3-16ae-4857-a49a-f17e805ce8ef"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_30_offerPriceAddon_description}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement x="490" y="0" width="65" height="15" uuid="68fe211c-7728-4632-a0cd-0a9da8694ac1">
+					<printWhenExpression><![CDATA[$P{showPrice}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8" isBold="false"/>
+					<paragraph rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_30_offerPriceAddon_price}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="65" height="15" uuid="c8d27c49-c7bf-4589-b503-630df1279e5a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_30_offerPriceAddon_articleNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

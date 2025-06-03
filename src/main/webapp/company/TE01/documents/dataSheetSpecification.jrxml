@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dataSheetSpecification" pageWidth="595" pageHeight="850" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="a78c8c4f-dc3c-45b2-b112-98783cae451d">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="offerPumpId" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_28_offerPump_specification."offerPumpId" AS tbl_28_offerPump_specification_offerPumpId,
+     tbl_28_offerPump_specification."id" AS tbl_28_offerPump_specification_id,
+     tbl_28_offerPump_specification."parameter" AS tbl_28_offerPump_specification_parameter,
+     tbl_28_offerPump_specification."value" AS tbl_28_offerPump_specification_value,
+     tbl_28_offerPump_specification."isActive" AS tbl_28_offerPump_specification_isActive,
+     tbl_28_offerPump_specification."sequence" AS tbl_28_offerPump_specification_sequence,
+     tbl_28_offerPump_specification."showInQuotation" AS tbl_28_offerPump_specification_showInQuotation,
+     tbl_28_offerPump_specification."showInDataSheet" AS tbl_28_offerPump_specification_showInDataSheet,
+     tbl_28_offerPump_specification."groupColumn" AS tbl_28_offerPump_specification_groupColumn
+FROM
+     "dbo"."tbl_28_offerPump_specification" tbl_28_offerPump_specification
+WHERE
+     tbl_28_offerPump_specification."offerPumpId" = $P{offerPumpId} and tbl_28_offerPump_specification."showInDataSheet"=1]]>
+	</queryString>
+	<field name="tbl_28_offerPump_specification_offerPumpId" class="java.lang.Integer"/>
+	<field name="tbl_28_offerPump_specification_id" class="java.lang.Integer"/>
+	<field name="tbl_28_offerPump_specification_parameter" class="java.lang.String"/>
+	<field name="tbl_28_offerPump_specification_value" class="java.lang.String"/>
+	<field name="tbl_28_offerPump_specification_isActive" class="java.lang.Boolean"/>
+	<field name="tbl_28_offerPump_specification_sequence" class="java.lang.Integer"/>
+	<field name="tbl_28_offerPump_specification_showInQuotation" class="java.lang.Boolean"/>
+	<field name="tbl_28_offerPump_specification_showInDataSheet" class="java.lang.Boolean"/>
+	<field name="tbl_28_offerPump_specification_groupColumn" class="java.lang.String"/>
+	<sortField name="tbl_28_offerPump_specification_offerPumpId"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="298" height="20" uuid="5cbb54fd-2194-4600-9602-dfa1349ab297"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="298" y="0" width="277" height="20" uuid="6cf8cb81-1cab-42bf-af05-0b5f7b65c68b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Details]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15">
+			<textField>
+				<reportElement x="0" y="0" width="298" height="15" uuid="d92eb41a-0155-4e54-813b-e8236c18785c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_28_offerPump_specification_parameter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="298" y="0" width="277" height="15" uuid="2eb6919d-7623-4fa5-bf2d-2065a324ed52"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_28_offerPump_specification_value}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

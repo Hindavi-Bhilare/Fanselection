@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PerformanceChartsheet" pageWidth="595" pageHeight="842" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="e01ba668-16d8-4d63-b992-e66ba1a884b5">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="173"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="hql">
+		<![CDATA[from PerformanceChartSheet]]>
+	</queryString>
+	<field name="customerName" class="java.lang.String"/>
+	<field name="project" class="java.lang.String"/>
+	<field name="companyName" class="java.lang.String"/>
+	<field name="logoPath" class="java.lang.String"/>
+	<field name="chart" class="net.sf.jasperreports.engine.JRRenderable"/>
+	<field name="speed" class="java.lang.String"/>
+	<field name="frequency" class="java.lang.String"/>
+	<field name="dpFlow" class="java.lang.Double"/>
+	<field name="dpHead" class="java.lang.Double"/>
+	<field name="fanModel" class="java.lang.String"/>
+	<field name="motorModel" class="java.lang.String"/>
+	<field name="uomFlow" class="java.lang.String"/>
+	<field name="uomHead" class="java.lang.String"/>
+	<field name="vanAngle" class="java.lang.Integer"/>
+	<background>
+		<band height="822" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="575" height="822" uuid="c1726511-f969-44f3-bf83-a9962f63558d"/>
+			</rectangle>
+		</band>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="93" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="59" width="65" height="12" uuid="dac1789d-69de-4be0-8441-d9836908a01c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Nominal Speed ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="59" width="64" height="12" uuid="da879596-e883-4335-8de4-6d089ae05e29"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Frequency (HZ)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="75" width="29" height="14" uuid="e6fb6f65-d0c3-476e-8107-1433909ba77e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Flow ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="75" width="42" height="14" uuid="ad025b5b-09e5-46fa-8fb5-b009928ee27c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Pressure]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="57" width="575" height="1" uuid="ddef2eb6-c5bc-478d-b253-a7997ad2817e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="92" width="575" height="1" uuid="4565fe46-7ad8-4142-8deb-5731c132259b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<image hAlign="Right">
+				<reportElement x="450" y="5" width="123" height="50" uuid="0d2821b2-175d-4326-9abe-fe75f8fad1d5"/>
+				<imageExpression><![CDATA[$F{logoPath}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="149" y="35" width="231" height="18" uuid="16aa2119-ca74-47a0-aa7f-26552dda9735"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="12" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Performance Curve]]></text>
+			</staticText>
+			<line>
+				<reportElement x="68" y="57" width="1" height="36" uuid="7c761c08-cb80-4efd-a952-7aab5eb4bda2"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="59" width="50" height="12" uuid="9c392d3c-df2f-4a8c-a9df-586bf34a75f2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Fan Model : ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="135" y="57" width="1" height="36" uuid="f12fbc72-5fa2-49de-828b-e297772c1b67"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="289" y="72" width="1" height="20" uuid="31a7c852-e4ac-4270-9b01-c8bf58e19b28"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="135" y="72" width="440" height="1" uuid="0804e747-61b5-42d9-9698-9b60d4cb037d"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="208" y="72" width="1" height="20" uuid="b12463a0-c802-4361-a503-7e586d9d5b1b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="337" y="72" width="1" height="21" uuid="a72c2684-8c9d-4b65-830f-4ecf67b7ffdd"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="418" y="57" width="1" height="36" uuid="35193cbe-f6e1-4b16-8a70-de6e470049dc"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="3" y="75" width="65" height="14" uuid="1ca5484e-bab2-4684-a0bc-b7d6cf9721e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{speed}!=null && !$F{speed}.equals("")?$F{speed}:"-"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="71" y="75" width="64" height="14" uuid="8ff287da-4cdf-4956-a336-3e3c871c7caf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frequency}!=null && !$F{frequency}.equals("")?$F{frequency}:"-"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="213" y="58" width="175" height="14" uuid="c1d25520-ff99-48f2-9fe7-30dbe0e63e06"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fanModel}!=null && !$F{fanModel}.equals("")?($F{fanModel}):"-"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="341" y="75" width="75" height="14" uuid="8f584858-8a96-4bc0-ac68-09a0522a0d24"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dpHead}!=null && $F{dpHead}!=0d ?$F{dpHead}+" "+$F{uomHead}:"-"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="213" y="75" width="75" height="14" uuid="c01191a6-5de1-4ad2-8747-0424d7225086"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dpFlow}!=null && $F{dpFlow}!=0d ?$F{dpFlow}+" "+$F{uomFlow}:"-"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="487" y="75" width="86" height="12" uuid="34c05ecf-1c5f-4f28-bf57-8d43af066e20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vanAngle}!=null && !$F{vanAngle}.equals("")?($F{vanAngle}):"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="425" y="75" width="53" height="12" uuid="29f87246-3879-42bc-8740-ac166d8bd151"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Fan Speed]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="59" width="53" height="12" uuid="1dee9562-223a-4466-98ab-e458e48f277f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Motor Model]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="487" y="59" width="86" height="12" uuid="3c6a8cf7-9e85-4a1a-8acf-a3aaca63049b"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{motorModel}!=null && !$F{motorModel}.equals("")?($F{motorModel}):"-"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="483" y="57" width="1" height="36" uuid="5e5e85cb-b4e7-44d9-ae1c-e61a99ec67d9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="729" splitType="Stretch">
+			<image scaleImage="Clip" hAlign="Center">
+				<reportElement x="4" y="0" width="569" height="706" uuid="b5e609c2-bcba-4ef1-8ece-771ffc83d9a8"/>
+				<imageExpression><![CDATA[$F{chart}]]></imageExpression>
+			</image>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,1077 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="technical_Data_sheet" pageWidth="595" pageHeight="850" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="ba514b02-5839-415d-850c-9f718f341324">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="736"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="5883ec92-8ef3-4940-9507-69cc7bf36c08"/>
+	<parameter name="chart" class="net.sf.jasperreports.engine.JRRenderable"/>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="technicalDataSheet.customerName" class="java.lang.String"/>
+	<field name="technicalDataSheet.project" class="java.lang.String"/>
+	<field name="technicalDataSheet.speed" class="java.lang.String"/>
+	<field name="technicalDataSheet.frequency" class="java.lang.String"/>
+	<field name="technicalDataSheet.dpFlow" class="java.lang.Double"/>
+	<field name="technicalDataSheet.dpHead" class="java.lang.Double"/>
+	<field name="technicalDataSheet.discharge" class="java.lang.String"/>
+	<field name="technicalDataSheet.pumpModel" class="java.lang.String"/>
+	<field name="technicalDataSheet.performanceCurveNo" class="java.lang.String"/>
+	<field name="technicalDataSheet.consultant" class="java.lang.String"/>
+	<field name="technicalDataSheet.application" class="java.lang.String"/>
+	<field name="technicalDataSheet.tagNo" class="java.lang.String"/>
+	<field name="technicalDataSheet.offerNo" class="java.lang.String"/>
+	<field name="technicalDataSheet.testingStd" class="java.lang.String"/>
+	<field name="technicalDataSheet.spgr" class="java.lang.String"/>
+	<field name="technicalDataSheet.powerDp" class="java.lang.String"/>
+	<field name="technicalDataSheet.efficiencyDp" class="java.lang.Double"/>
+	<field name="technicalDataSheet.npshrDp" class="java.lang.String"/>
+	<field name="technicalDataSheet.npshA" class="java.lang.String"/>
+	<field name="technicalDataSheet.soh" class="java.lang.String"/>
+	<field name="technicalDataSheet.primeMoverPower" class="java.lang.Double"/>
+	<field name="technicalDataSheet.stage" class="java.lang.Integer"/>
+	<field name="technicalDataSheet.offerDate" class="java.lang.String"/>
+	<field name="technicalDataSheet.preparedBy" class="java.lang.String"/>
+	<field name="technicalDataSheet.companyAddress" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomFlow" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomHead" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomSpeed" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomFrequency" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomPower" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomEff" class="java.lang.String"/>
+	<field name="technicalDataSheet.qty" class="java.lang.Integer"/>
+	<field name="technicalDataSheet.uomSolidSize" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomDimension" class="java.lang.String"/>
+	<field name="technicalDataSheet.companyName" class="java.lang.String"/>
+	<field name="technicalDataSheet.logoPath" class="java.lang.String"/>
+	<field name="technicalDataSheet.logo1Path" class="java.lang.String"/>
+	<field name="technicalDataSheet.customerAddress" class="java.lang.String"/>
+	<field name="technicalDataSheet.enquiryDate" class="java.lang.String"/>
+	<field name="technicalDataSheet.reference" class="java.lang.String"/>
+	<field name="technicalDataSheet.fluidName" class="java.lang.String"/>
+	<field name="technicalDataSheet.uomTemperature" class="java.lang.String"/>
+	<field name="technicalDataSheet.temperature" class="java.lang.Double"/>
+	<field name="technicalDataSheet.suctionPressure" class="java.lang.String"/>
+	<field name="technicalDataSheet.system" class="java.lang.String"/>
+	<field name="technicalDataSheet.pumpQtyinSystem" class="java.lang.String"/>
+	<field name="technicalDataSheet.impellarDia" class="java.lang.String"/>
+	<field name="technicalDataSheet.powerDpMax" class="java.lang.String"/>
+	<field name="technicalDataSheet.pole" class="java.lang.String"/>
+	<field name="technicalDataSheet.pumpType" class="java.lang.String"/>
+	<field name="technicalDataSheet.packing" class="java.lang.String"/>
+	<field name="technicalDataSheet.axisOfOperation" class="java.lang.String"/>
+	<field name="technicalDataSheet.lubrication" class="java.lang.String"/>
+	<field name="technicalDataSheet.mounting" class="java.lang.String"/>
+	<field name="technicalDataSheet.flangeSpecification" class="java.lang.String"/>
+	<field name="technicalDataSheet.bearingType" class="java.lang.String"/>
+	<field name="technicalDataSheet.rotation" class="java.lang.String"/>
+	<field name="technicalDataSheet.flow" class="java.lang.Double"/>
+	<field name="technicalDataSheet.head" class="java.lang.Double"/>
+	<field name="technicalDataSheet.overallEfficiency" class="java.lang.Double"/>
+	<field name="technicalDataSheet.uomPressure" class="java.lang.String"/>
+	<field name="technicalDataSheet.ratedCurrent" class="java.lang.Double"/>
+	<field name="technicalDataSheet.voltageTolerance" class="java.lang.String"/>
+	<field name="technicalDataSheet.effClass" class="java.lang.String"/>
+	<field name="technicalDataSheet.primemoverEff" class="java.lang.Double"/>
+	<field name="technicalDataSheet.degreeProtection" class="java.lang.String"/>
+	<field name="technicalDataSheet.insulationClass" class="java.lang.String"/>
+	<field name="technicalDataSheet.suction" class="java.lang.String"/>
+	<field name="data.A" class="java.lang.String"/>
+	<field name="data.B" class="java.lang.String"/>
+	<field name="userInput.Mechanical Shaft Seal" class="java.lang.String"/>
+	<field name="tbl14PrimemoverMaster.framesize" class="java.lang.String"/>
+	<field name="data.Weight" class="java.lang.String"/>
+	<field name="tbl14PrimemoverMaster.eff" class="java.lang.String"/>
+	<field name="tbl1401Motortype.pole" class="java.lang.String"/>
+	<field name="tbl14PrimemoverMaster.power" class="java.lang.String"/>
+	<field name="userInput.Insulation Class" class="java.lang.String"/>
+	<field name="userInput.Flange Standard" class="java.lang.String"/>
+	<field name="technicalDataSheet.startingMethod" class="java.lang.String"/>
+	<field name="technicalDataSheet.powerFactor" class="java.lang.Double"/>
+	<field name="technicalDataSheet.minTemperature" class="java.lang.Double"/>
+	<field name="technicalDataSheet.maxTemperature" class="java.lang.Double"/>
+	<field name="data.reportImage" class="java.lang.String"/>
+	<field name="data.H" class="java.lang.String"/>
+	<field name="data.H1" class="java.lang.String"/>
+	<field name="data.D" class="java.lang.String"/>
+	<field name="data.PCD" class="java.lang.String"/>
+	<field name="tbl14PrimemoverMaster.motorCableLength" class="java.lang.String"/>
+	<field name="data.FlangeDia" class="java.lang.String"/>
+	<field name="tbl1401Motortype.series" class="java.lang.String"/>
+	<field name="userInput.Mechanical Shaft Seal_1" class="java.lang.String"/>
+	<background>
+		<band height="820" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="575" height="820" uuid="75973244-3ee2-4ea9-b852-7cdc6ae4bb69"/>
+			</rectangle>
+		</band>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="175" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="4" y="160" width="60" height="14" uuid="66fe4300-ab83-45d2-9e5a-aad884e2c251"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.frequency}!=null && !$F{technicalDataSheet.frequency}.equals("")?$F{technicalDataSheet.frequency}+" "+$F{technicalDataSheet.uomFrequency}:"-"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="66" y="69" width="222" height="12" uuid="2f18a4ad-896f-42ee-9c13-c1858cd2acfb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.customerName}!=null && !$F{technicalDataSheet.customerName}.equals("")?$F{technicalDataSheet.customerName}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="72" y="160" width="56" height="14" uuid="d1427461-535e-49da-b4a1-039ad69d2313"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Discharge(Q)= ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="144" width="575" height="1" uuid="777296be-e9e3-4c13-8bfa-3782f8724912"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="4" y="16" width="389" height="27" uuid="0679c8ee-393c-43b2-b904-a13a5b8eec87"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.companyName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="291" y="99" width="60" height="11" uuid="d9bbb2c5-c76a-4727-bede-a47bd461674f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[OfferNo :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="354" y="69" width="220" height="12" uuid="b827837b-290b-4d33-ae4a-51edb24cdcd4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.consultant}!=null && !$F{technicalDataSheet.consultant}.equals("")?$F{technicalDataSheet.consultant}:"-"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="66" y="144" width="1" height="31" uuid="e3061aa7-3f0b-4b1e-bf2e-71a1c93bfe55"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="128" y="160" width="70" height="14" uuid="2fae4724-d667-4eb6-bb30-a962ef8c62fe"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.dpFlow}!=null && $F{technicalDataSheet.dpFlow}!=0d ?$F{technicalDataSheet.dpFlow}+" "+$F{technicalDataSheet.uomFlow}:"-"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="82" width="575" height="1" uuid="7dbba84a-0afc-4875-97cd-ee610ec78ea2"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="96" width="575" height="1" uuid="319736be-9a4a-41d4-8145-7966cffb1604"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="1" y="128" width="574" height="1" uuid="bd5f68f8-77b6-4d94-b74b-3e52395e8769"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="291" y="83" width="60" height="12" uuid="0775b713-ba22-4e3f-9297-b75d010c2d9d"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Project :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="69" width="60" height="12" uuid="79e2809c-2d80-4f76-8af9-2d3786ed28f4"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Consultant :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="147" width="56" height="12" uuid="8a80e89b-0f97-4057-8702-652c0723fad1"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[DutyPoint :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="130" width="60" height="12" uuid="0296de2a-764e-472c-a219-d13953a34a5a"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[PumpModel :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="66" y="83" width="222" height="11" uuid="65e88407-97cd-468e-85a6-83d3330bc82d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.customerAddress}!=null && !$F{technicalDataSheet.customerAddress}.equals("")?$F{technicalDataSheet.customerAddress}:"-"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="66" y="130" width="222" height="14" uuid="344079de-d028-4818-9034-991beda3e30d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.pumpModel}!=null && !$F{technicalDataSheet.pumpModel}.equals("")?$F{technicalDataSheet.pumpModel}:"-"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="174" width="574" height="1" uuid="9d3ca6b9-d259-4d7f-b0a9-6c651b9319b9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="354" y="115" width="220" height="11" uuid="76205907-9f99-4912-b05e-a48b1520229c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.tagNo}!=null && !$F{technicalDataSheet.tagNo}.equals("")?$F{technicalDataSheet.tagNo}:"-"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="354" y="130" width="221" height="12" uuid="03006e6f-4d8d-4715-ab05-b1c2e672d407"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.application}!=null && !$F{technicalDataSheet.application}.equals("")&& !$F{technicalDataSheet.application}.equals("None")?$F{technicalDataSheet.application}:"-"]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="66" y="99" width="218" height="11" uuid="208da1df-9086-4535-b5f8-6e27e5c3994e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.offerDate}!=null && !$F{technicalDataSheet.offerDate}.equals("")?new SimpleDateFormat("MM/dd/yyyy").format(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse($F{technicalDataSheet.offerDate})):""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="147" width="60" height="12" uuid="a5a814c5-3a6d-407f-b1b9-02b9ea1600d7"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Frequency :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="83" width="60" height="12" uuid="2f1bf8c2-480d-4273-89a5-b27a1926b6cb"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Address :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="112" width="575" height="1" uuid="de8c032c-bfe0-44c9-8158-ea3b6d3fdfdc"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="291" y="115" width="60" height="11" uuid="c92b46d7-65ac-42af-bf45-03c44a4b423d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Tag Number :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="130" width="60" height="12" uuid="955ec0e7-a2e6-4cfd-b1fa-8560f2d52d9b"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Application :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="354" y="99" width="219" height="11" uuid="701a269b-c3bd-4ebe-aa23-b22764d1a8e9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.offerNo}!=null && !$F{technicalDataSheet.offerNo}.equals("")?$F{technicalDataSheet.offerNo}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="183" y="48" width="200" height="18" uuid="f678ddcc-9925-4b65-9d68-a04f04490410"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
+					<font fontName="Tahoma" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Technical Datasheet]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="115" width="60" height="11" uuid="c98d97eb-6c5e-4369-850c-5499f60f7e96"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Enquiry Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="69" width="60" height="12" uuid="b757a50f-81d4-452b-afad-5ebaf516f90c"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Customer :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="68" width="575" height="1" uuid="b3bc376b-4e7c-451b-8420-8afedb45a8ae"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="242" y="160" width="70" height="14" uuid="f72fd055-ff76-4603-9c50-bbf108895c73"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.dpHead}!=null && $F{technicalDataSheet.dpHead}!=0d ?$F{technicalDataSheet.dpHead}+" "+$F{technicalDataSheet.uomHead}:"-"]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="66" y="115" width="222" height="11" uuid="cdb8b11b-6dc9-4943-894f-5010d7f91478"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.enquiryDate}!=null && !$F{technicalDataSheet.enquiryDate}.equals("")?new SimpleDateFormat("MM/dd/yyyy").format(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse($F{technicalDataSheet.enquiryDate})):""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="199" y="160" width="42" height="14" uuid="a4b549ec-97b5-4da3-8a6b-a2846637f0e7"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Head (H) =]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="447" y="5" width="123" height="45" uuid="5d9fd52b-42cc-40a6-9802-ac239756bf35"/>
+				<imageExpression><![CDATA[$F{technicalDataSheet.logoPath}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="354" y="82" width="222" height="12" uuid="e9a5e12b-b6f6-4d83-beae-40ccdc832b12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.project}!=null && !$F{technicalDataSheet.project}.equals("")?$F{technicalDataSheet.project}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="99" width="60" height="11" uuid="3ccecd7c-a39a-4336-9876-606b228543bb"/>
+				<textElement markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Offer Date :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<summary>
+		<band height="625" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="436" y="250" width="140" height="11" isRemoveLineWhenBlank="true" uuid="4b0b9e90-4d5c-4d59-91ba-316f4f5a90f0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl14PrimemoverMaster.power}+" kW"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="436" y="22" width="140" height="11" isRemoveLineWhenBlank="true" uuid="6be39025-5b2c-4d0e-9b33-f1302668f38f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[!$F{technicalDataSheet.fluidName}.equals("")?$F{technicalDataSheet.fluidName}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="297" width="109" height="11" isRemoveLineWhenBlank="true" uuid="8b0785ee-cd0d-475a-8706-7a422115168e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Efficiency Class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="164" width="109" height="11" isRemoveLineWhenBlank="true" uuid="e1f2e58c-527e-4d6f-ab89-2050b7da6f33"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Solid Passage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="436" y="129" width="133" height="11" isRemoveLineWhenBlank="true" uuid="d45bdac8-8099-464f-8e8b-b71da37b4b84"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[ISO 9906:2012 GRADE 3B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="436" y="357" width="109" height="11" isRemoveLineWhenBlank="true" uuid="0c13be44-6bb8-43f1-be64-a88298e415fe"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Continuous (S1)]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="2" y="4" width="320" height="333" uuid="d503d60b-fe95-4e16-af4d-108e2b63bb4e"/>
+				<imageExpression><![CDATA[$P{chart}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="226" width="109" height="11" isRemoveLineWhenBlank="true" uuid="c3e3f305-8142-49c5-8916-7022d4f17c0c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Frequency]]></text>
+			</staticText>
+			<line>
+				<reportElement x="160" y="518" width="1" height="104" uuid="2dc70949-31e3-4770-9ef7-e745204ca12a"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="98" y="609" width="58" height="11" uuid="0d1adf2a-ecea-4a6d-8671-291ca768052b"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data.FlangeDia}!=null && !$F{data.FlangeDia}.equals( "0" ) && !$F{data.FlangeDia}.equals( "" )? $F{data.FlangeDia}:"-" ]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="436" y="297" width="139" height="11" isRemoveLineWhenBlank="true" uuid="0e832222-7579-40f2-8bac-723354e582e8"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.effClass}!=null && !$F{technicalDataSheet.effClass}.equals("")?$F{technicalDataSheet.effClass}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="309" width="109" height="11" isRemoveLineWhenBlank="true" uuid="42077f21-9c7c-4187-a919-b4c29b194989"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Power Factor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="452" width="109" height="11" isRemoveLineWhenBlank="true" uuid="84227537-a644-4c0f-a578-8691b9f8bb82"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Mechanical Seal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="436" y="152" width="109" height="11" isRemoveLineWhenBlank="true" uuid="6d184af2-aba2-4af6-ac8f-289f359b5e62"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[5 Meter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="152" width="109" height="11" isRemoveLineWhenBlank="true" uuid="95334a0f-380c-44f6-8ed7-6608b5e15d1b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Max Immersion Depth]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="436" y="202" width="139" height="11" isRemoveLineWhenBlank="true" uuid="d8880912-f674-4ffc-becc-4c18b8ee24c9"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl1401Motortype.series}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="31" y="597" width="61" height="11" uuid="f8c19c8e-0faf-4c0d-8573-f7714512e6d8"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[PCD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="274" width="109" height="11" isRemoveLineWhenBlank="true" uuid="70ab9ea0-f8a1-4348-86b9-50f5b62b995f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Rated Current]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="436" y="321" width="139" height="11" isRemoveLineWhenBlank="true" uuid="cb52b69e-7e57-4d28-a58a-9afde5d3b800"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.startingMethod}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="31" y="521" width="61" height="11" uuid="b68232a3-bcf8-493c-8e0c-0aa4d1ea6299"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="436" y="214" width="140" height="11" isRemoveLineWhenBlank="true" uuid="9f72b937-5320-4ab3-8e1f-37476eb62e53"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl14PrimemoverMaster.framesize}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="324" y="75" width="248" height="15" isRemoveLineWhenBlank="true" uuid="9b33fcce-5e42-45eb-a962-faeaf6156d23"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Techanical Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="117" width="109" height="11" isRemoveLineWhenBlank="true" uuid="99b41f70-0d7b-4039-9369-1bad47efd5b8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Head Max]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="97" y="521" width="61" height="11" uuid="351fe1a4-e79e-466f-8cf9-9e610c6ae9f8"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[mm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="262" width="109" height="11" isRemoveLineWhenBlank="true" uuid="d8259c54-1a15-454b-820a-b62e67801a7e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Rated Voltage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="34" width="109" height="11" isRemoveLineWhenBlank="true" uuid="25e80090-ee14-46a4-9528-a5bc4c7c3baf"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Liquid Temperature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="202" width="109" height="11" isRemoveLineWhenBlank="true" uuid="540286b8-020b-4684-843b-283f9436f7af"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Motor Type]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="98" y="585" width="58" height="11" uuid="19acef17-9068-46fa-844c-a226eac0f384"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data.D}!=null && !$F{data.D}.equals( "0" ) && !$F{data.D}.equals( "" )? $F{data.D}:"-" ]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="6" width="233" height="14" isRemoveLineWhenBlank="true" uuid="28eb6e90-f115-4515-98f6-ded18e202e73"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Liquid]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="436" y="93" width="140" height="11" isRemoveLineWhenBlank="true" uuid="e5b262b4-1d6d-4e24-888e-11e23ca81b31"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.pumpType}!=null && !$F{technicalDataSheet.pumpType}.equals("")?$F{technicalDataSheet.pumpType}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="286" width="109" height="11" isRemoveLineWhenBlank="true" uuid="7c6e43e4-5dd0-4209-ba8a-39c3e513715f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Motor Efficiency]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="436" y="262" width="140" height="11" isRemoveLineWhenBlank="true" uuid="a54a5050-b53a-4236-8783-2f1f0d7341ae"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.voltageTolerance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="238" width="109" height="11" isRemoveLineWhenBlank="true" uuid="9a1d14e7-0ce5-4773-9821-1707cb2f4735"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Pole]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="31" y="585" width="61" height="11" uuid="8577d4d5-3ad4-4a7c-9007-133a490bb1dd"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[D]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="393" width="109" height="11" isRemoveLineWhenBlank="true" uuid="621d0137-47d3-4e6b-81f3-7fd43fd52240"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Length]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="202" width="1" height="1" uuid="bc477fa3-fcbb-4678-aec2-15eccbb9e22c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="405" width="109" height="11" isRemoveLineWhenBlank="true" uuid="6cb02932-3178-4222-b885-47e176fd3abb"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Cable type]]></text>
+			</staticText>
+			<line>
+				<reportElement x="29" y="518" width="1" height="104" uuid="73e82d1f-a5ed-4921-9b4e-8faeefb39bd1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="31" y="537" width="61" height="11" uuid="92ef97bb-2f1f-425a-9f21-0dc163e24509"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[A]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="436" y="105" width="140" height="11" isRemoveLineWhenBlank="true" uuid="3dee216c-f9cd-4501-a924-e8dfe87c4463"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.speed}!=null && !$F{technicalDataSheet.speed}.equals("")?$F{technicalDataSheet.speed}+" "+$F{technicalDataSheet.uomSpeed}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="374" width="246" height="15" isRemoveLineWhenBlank="true" uuid="5b77c8af-add8-489d-917c-ca9f609d7fe6"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Cable]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="436" y="309" width="139" height="11" isRemoveLineWhenBlank="true" uuid="260d4013-fd72-4f89-90f3-5b76088530c0"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.powerFactor}!=null && !$F{technicalDataSheet.powerFactor}.equals("")?$F{technicalDataSheet.powerFactor}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="46" width="109" height="11" isRemoveLineWhenBlank="true" uuid="68fec8e6-1516-4193-ba33-9710f61be43b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Liquid Temperature range]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="345" width="109" height="11" isRemoveLineWhenBlank="true" uuid="d24ff52e-a004-48b1-a80e-687d40d53eb4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Insulation Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="181" width="246" height="15" isRemoveLineWhenBlank="true" uuid="4168fb2b-95ee-4a88-a1c7-fc4a4a65ad48"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Electical Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="22" width="109" height="11" isRemoveLineWhenBlank="true" uuid="ad72e527-b22d-4bc3-b926-52cdc54e7f39"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Pumped liquid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="105" width="109" height="11" isRemoveLineWhenBlank="true" uuid="013aae47-7a9c-4e70-9acb-91bca244f8e2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Speed for pump data]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="436" y="393" width="140" height="11" isRemoveLineWhenBlank="true" uuid="11233aae-eec2-4c03-8142-fabc4e9ef976"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl14PrimemoverMaster.motorCableLength}+" m"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="333" width="109" height="11" isRemoveLineWhenBlank="true" uuid="fe13a0b5-d28c-4821-9911-2bf19c43a2e3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Degree Of Protection]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="98" y="596" width="58" height="11" uuid="fc5a2a56-f280-41b0-82de-250368c9c55a"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data.PCD}!=null && !$F{data.PCD}.equals( "0" ) && !$F{data.PCD}.equals( "" )? $F{data.PCD}:"-" ]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="31" y="550" width="61" height="11" uuid="8a556190-64ae-40d7-84a9-ba346e17f969"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="436" y="58" width="137" height="11" isRemoveLineWhenBlank="true" uuid="376a4a64-7a46-4241-b644-c88f5760c5a3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[998.3 kg/m3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="31" y="561" width="61" height="11" uuid="2627090e-34ad-40d6-9b3a-53f2058312f3"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[H	]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="4" y="339" width="315" height="175" uuid="95f98d89-c091-42b4-b8e5-f7ff4850e408"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[$F{data.reportImage}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="250" width="109" height="11" isRemoveLineWhenBlank="true" uuid="5856d55d-23fd-48d1-b09a-91be7c959407"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Rated Power]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="436" y="238" width="140" height="11" isRemoveLineWhenBlank="true" uuid="632e38ed-0e15-4a73-b805-5ea8ba519dda"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl1401Motortype.pole}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="98" y="561" width="58" height="11" uuid="edba896f-0727-449c-bfbe-88a2d7535c80"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data.H}!=null && !$F{data.H}.equals( "0" ) && !$F{data.H}.equals( "" )? $F{data.H}:"-" ]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement positionType="Float" x="436" y="286" width="140" height="11" isRemoveLineWhenBlank="true" uuid="45f15b3e-778c-43d4-89be-913c8b162398"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(new Double(Double.parseDouble($F{tbl14PrimemoverMaster.eff})))*100+" %"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="436" y="274" width="140" height="11" isRemoveLineWhenBlank="true" uuid="6722de95-0e4d-4a20-bb66-a35abeca42f3"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.ratedCurrent}!=null && !$F{technicalDataSheet.ratedCurrent}.equals("")?$F{technicalDataSheet.ratedCurrent}:"-"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="436" y="33" width="140" height="11" isRemoveLineWhenBlank="true" uuid="deb640a2-55ba-4678-b9cf-e8a5afe99efc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[!$F{technicalDataSheet.temperature}.equals("")?$F{technicalDataSheet.temperature}+" °C":"-"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="436" y="345" width="140" height="11" isRemoveLineWhenBlank="true" uuid="a7248a80-edfb-4a12-a369-91502de5c589"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.insulationClass}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="31" y="609" width="61" height="11" uuid="771d3993-31c4-43dd-95ab-4a8cefdf758d"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Flange Dia]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="436" y="141" width="140" height="11" isRemoveLineWhenBlank="true" uuid="d5979343-8566-4326-9e8f-d41ac269938c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.stage}!=null && $F{technicalDataSheet.stage}!=0 ?$F{technicalDataSheet.stage}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="129" width="109" height="11" isRemoveLineWhenBlank="true" uuid="7391ffcf-b623-48cc-b7be-43688d2efd9b"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Curve Tolerance]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="436" y="452" width="100" height="11" isRemoveLineWhenBlank="true" uuid="9a6f082b-0a3c-4e11-81cb-395190c184b6"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userInput.Mechanical Shaft Seal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="436" y="333" width="140" height="11" isRemoveLineWhenBlank="true" uuid="4df4015e-ceb0-4b5a-af16-ef13d2f6f5d9"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.degreeProtection}!=null && !$F{technicalDataSheet.degreeProtection}.equals("")?$F{technicalDataSheet.degreeProtection}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="214" width="109" height="11" isRemoveLineWhenBlank="true" uuid="183cb197-ee0c-4769-9a20-0ebfc89b26af"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Frame]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="58" width="109" height="11" isRemoveLineWhenBlank="true" uuid="09add9c7-1b7e-4352-90fc-e23eb8017575"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Density]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="98" y="550" width="58" height="11" uuid="4214bc59-1dd2-4d0d-beda-9e84cc295735"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data.B}!=null && !$F{data.B}.equals( "0" ) && !$F{data.B}.equals( "" )? $F{data.B}:"-" ]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="357" width="109" height="11" isRemoveLineWhenBlank="true" uuid="80c48c00-90d1-4850-a4cf-0fac5ec9ce28"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Duty Type]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="98" y="539" width="58" height="11" uuid="92273058-9db5-41f7-b616-02a92451e46c"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data.A}!=null && !$F{data.A}.equals( "0" ) && !$F{data.A}.equals( "" )? $F{data.A}:"-" ]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="31" y="573" width="61" height="11" uuid="869ec7ee-97af-4b60-9abb-4b15527b2b68"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[H1]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="436" y="46" width="139" height="11" isRemoveLineWhenBlank="true" uuid="8d24ce32-fcd1-4271-906d-9e974ffa650b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.minTemperature}+" °C to +"+$F{technicalDataSheet.maxTemperature}+" °C"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="436" y="226" width="140" height="11" isRemoveLineWhenBlank="true" uuid="68e0b46f-db81-4c89-a6c1-4131bb37fe80"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.frequency}!=null && !$F{technicalDataSheet.frequency}.equals("")?$F{technicalDataSheet.frequency}+" "+$F{technicalDataSheet.uomFrequency}:"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="141" width="109" height="11" isRemoveLineWhenBlank="true" uuid="1403afa2-0b02-423c-a1e0-7d4e4d3c1fe4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Stage]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="98" y="573" width="58" height="11" uuid="2c0ecbec-c99a-4d30-a6e5-2eb1e2a51fa8"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data.H1}!=null && !$F{data.H1}.equals( "0" ) && !$F{data.H1}.equals( "" )? $F{data.H1}:"-" ]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="432" width="200" height="15" isRemoveLineWhenBlank="true" uuid="4fa112a5-f8e9-44bc-afe4-5bdd5ed468bc"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Material of Construction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="93" width="109" height="11" isRemoveLineWhenBlank="true" uuid="3a3f67a5-ad08-493c-8053-a77c3eed0ab7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Pump Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="417" width="109" height="11" isRemoveLineWhenBlank="true" uuid="c275a397-667f-4261-912d-947f12597d14"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Main Plug]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="327" y="321" width="109" height="11" isRemoveLineWhenBlank="true" uuid="744ed937-cad6-4302-8376-1181dd625d3a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Connection]]></text>
+			</staticText>
+			<line>
+				<reportElement x="29" y="535" width="132" height="1" uuid="11e492f6-6902-49b8-9b86-adcfec7b2c3c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="436" y="117" width="140" height="11" isRemoveLineWhenBlank="true" uuid="4ef11b3d-6c4d-4eb2-b63d-1cc109c6b6f9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{technicalDataSheet.soh}!=null && !$F{technicalDataSheet.soh}.equals("")?Math.round(Double.parseDouble($F{technicalDataSheet.soh}))+" "+$F{technicalDataSheet.uomHead}:"-"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="29" y="518" width="132" height="1" uuid="8b1f4df8-e0e6-49f0-a472-18f34671ef97"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="93" y="518" width="1" height="104" uuid="4c04f54f-dcde-4a99-b742-c4707dedf0f9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="29" y="621" width="132" height="1" uuid="5d6b77bd-bfb7-4b8d-87f9-8d5e1cc6cf72"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<subreport>
+				<reportElement positionType="Float" x="327" y="464" width="250" height="90" isRemoveLineWhenBlank="true" uuid="e7027a18-4e6e-40d3-80d5-b6829662f795"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("technicalDataSheet.modelMocDataSheets")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["technicalDatasheet_subreport1_SinglePage.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="572" width="109" height="11" uuid="4bdda628-a478-44fa-9ba8-49187f6f4a92"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Net weight]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="585" width="109" height="11" uuid="e3640ddb-6dd3-41ea-8acd-92ec6e93e160"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="8"/>
+				</textElement>
+				<text><![CDATA[Gross weight]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="326" y="556" width="200" height="14" uuid="77a92b54-4865-4efc-b183-090be9d1bce5"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[Other]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="436" y="572" width="139" height="11" uuid="656a6ea1-3725-4a1a-9ca9-fd8166422193"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data.Weight}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
