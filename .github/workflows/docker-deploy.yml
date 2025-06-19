@@ -1,0 +1,37 @@
+name: Build and Deploy FanSelection
+
+on:
+  push:
+    branches:
+      - master  # or 'main' if that’s your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Windows EC2
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            echo "Navigating to project directory"
+            cd "/c/fanselection"
+
+            echo "Pulling latest code"
+            git pull
+
+            echo "Building WAR using Docker Maven image"
+            docker run --rm -v "/c/fanselection:/app" -w /app maven:3.8-openjdk-11 mvn clean package -DskipTests
+
+            echo "Copying WAR to Tomcat"
+            cp target/*.war "/c/Program Files/Apache Software Foundation/Tomcat 9.0/webapps/ROOT.war"
+
+            echo "Restarting Tomcat service"
+            net stop Tomcat9
+            net start Tomcat9
