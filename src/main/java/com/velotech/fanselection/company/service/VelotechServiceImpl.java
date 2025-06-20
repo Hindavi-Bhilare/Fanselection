@@ -1,12 +1,7 @@
 
 package com.velotech.fanselection.company.service;
 
-import java.text.DecimalFormat
-
-;
-
-
-
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
