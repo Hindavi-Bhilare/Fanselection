@@ -3,7 +3,7 @@ name: Build and Deploy FanSelection
 on:
   push:
     branches:
-      - master  # or 'main' if that’s your default branch
+      - master  # Trigger this workflow only when code is pushed to the master branch
 
 jobs:
   deploy:
@@ -13,25 +13,26 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Deploy to Windows EC2
+      - name: Deploy to Windows EC2 via SSH
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          shell: powershell
           script: |
-            echo "Navigating to project directory"
-            cd "/c/fanselection"
+            Write-Host "Navigating to project directory"
+            cd "C:\fanselection"
 
-            echo "Pulling latest code"
+            Write-Host "Pulling latest code from GitHub"
             git pull
 
-            echo "Building WAR using Docker Maven image"
-            docker run --rm -v "/c/fanselection:/app" -w /app maven:3.8-openjdk-11 mvn clean package -DskipTests
+            Write-Host "Building WAR using Docker Maven image"
+            docker run --rm -v "C:\fanselection:C:\app" -w "C:\app" maven:3.8-openjdk-11 mvn clean package -DskipTests
 
-            echo "Copying WAR to Tomcat"
-            cp target/*.war "/c/Program Files/Apache Software Foundation/Tomcat 9.0/webapps/ROOT.war"
+            Write-Host "Copying WAR to Tomcat webapps folder"
+            Copy-Item "C:\fanselection\target\*.war" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\ROOT.war" -Force
 
-            echo "Restarting Tomcat service"
-            net stop Tomcat9
-            net start Tomcat9
+            Write-Host "Restarting Tomcat service"
+            Stop-Service -Name "Tomcat9" -Force
+            Start-Service -Name "Tomcat9"
