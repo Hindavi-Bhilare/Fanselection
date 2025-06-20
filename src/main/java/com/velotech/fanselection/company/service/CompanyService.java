@@ -9,4 +9,7 @@ import com.velotech.fanselection.models.Tbl26OfferFan;
 public interface CompanyService {
 
 	boolean getSummarySheetForOffers(List<Tbl26OfferFan> offerFans);
+
+
+
 }
