@@ -10,6 +10,4 @@ public interface CompanyService {
 
 	boolean getSummarySheetForOffers(List<Tbl26OfferFan> offerFans);
 
-
-
 }
