@@ -1,38 +1,37 @@
-name: Build and Deploy FanSelection
+name: Build and Deploy to EC2 Tomcat
 
 on:
   push:
     branches:
-      - master  # Trigger this workflow only when code is pushed to the master branch
+      - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Deploy to Windows EC2 via SSH
+      - name: Build WAR with Docker
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/app -w /app maven:3.8-openjdk-11 mvn clean package -DskipTests
+
+      - name: Copy WAR to EC2 via SCP
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "target/*.war"
+          target: "/C/Program Files/Apache Software Foundation/Tomcat 9.0/webapps/ROOT.war"
+
+      - name: Restart Tomcat on Windows EC2
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          shell: powershell
           script: |
-            Write-Host "Navigating to project directory"
-            cd "C:\fanselection"
-
-            Write-Host "Pulling latest code from GitHub"
-            git pull
-
-            Write-Host "Building WAR using Docker Maven image"
-            docker run --rm -v "C:\fanselection:C:\app" -w "C:\app" maven:3.8-openjdk-11 mvn clean package -DskipTests
-
-            Write-Host "Copying WAR to Tomcat webapps folder"
-            Copy-Item "C:\fanselection\target\*.war" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\ROOT.war" -Force
-
-            Write-Host "Restarting Tomcat service"
-            Stop-Service -Name "Tomcat9" -Force
-            Start-Service -Name "Tomcat9"
+            net stop Tomcat9
+            net start Tomcat9
