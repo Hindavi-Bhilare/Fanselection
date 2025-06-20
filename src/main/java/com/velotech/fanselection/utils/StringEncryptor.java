@@ -72,6 +72,8 @@ public class StringEncryptor {
 
 			keyFactory = SecretKeyFactory.getInstance(encryptionScheme);
 			cipher = Cipher.getInstance(encryptionScheme);
+	
+
 
 		} catch (InvalidKeyException e) {
 
